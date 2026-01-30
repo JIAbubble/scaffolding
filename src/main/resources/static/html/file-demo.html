@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>文件上传下载示例</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 24px;
+            background-color: #f5f5f5;
+        }
+        .card {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        h1 {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+        .row {
+            margin-bottom: 16px;
+        }
+        button {
+            padding: 8px 16px;
+            border-radius: 4px;
+            border: 1px solid #1890ff;
+            background-color: #1890ff;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .log {
+            margin-top: 12px;
+            font-size: 13px;
+            color: #555;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h1>文件上传 / 下载示例</h1>
+    <div class="row">
+        <input type="file" id="fileInput">
+        <button id="uploadBtn" onclick="uploadFile()">上传</button>
+    </div>
+    <div class="row">
+        <label>最近上传文件名：</label>
+        <span id="lastFilename"></span>
+    </div>
+    <div class="row">
+        <button onclick="downloadLast()">下载最近上传的文件</button>
+    </div>
+    <div class="log" id="log"></div>
+</div>
+
+<script src="/js/auth.js"></script>
+<script>
+    function logMessage(msg) {
+        document.getElementById('log').textContent = msg;
+        console.log(msg);
+    }
+
+    async function uploadFile() {
+        if (!AuthUtil.requireAuth()) {
+            return;
+        }
+
+        const input = document.getElementById('fileInput');
+        const file = input.files[0];
+        const uploadBtn = document.getElementById('uploadBtn');
+
+        if (!file) {
+            logMessage('请先选择文件');
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('file', file);
+
+        uploadBtn.disabled = true;
+        logMessage('上传中...');
+
+        try {
+            const token = AuthUtil.getToken();
+            const resp = await fetch('/api/files/upload', {
+                method: 'POST',
+                headers: token ? { 'Authorization': 'Bearer ' + token } : {},
+                body: formData
+            });
+
+            const text = await resp.text();
+            if (!resp.ok) {
+                throw new Error(text || '上传失败');
+            }
+
+            document.getElementById('lastFilename').textContent = text;
+            logMessage('上传成功，文件名：' + text);
+        } catch (e) {
+            logMessage('上传失败：' + e.message);
+        } finally {
+            uploadBtn.disabled = false;
+        }
+    }
+
+    function downloadLast() {
+        const filename = document.getElementById('lastFilename').textContent;
+        if (!filename) {
+            logMessage('请先上传一个文件');
+            return;
+        }
+        const url = '/api/files/download/' + encodeURIComponent(filename);
+        window.open(url, '_blank');
+    }
+</script>
+</body>
+</html>
+
+

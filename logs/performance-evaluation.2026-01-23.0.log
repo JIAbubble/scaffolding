@@ -1,0 +1,1861 @@
+2026-01-23 09:24:07.769 [main] INFO  c.e.p.PerformanceEvaluationApplication - Starting PerformanceEvaluationApplication using Java 17.0.15 with PID 1916 (D:\work\performanceEvaluation\target\classes started by code in D:\work\performanceEvaluation)
+2026-01-23 09:24:07.772 [main] DEBUG c.e.p.PerformanceEvaluationApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2026-01-23 09:24:07.773 [main] INFO  c.e.p.PerformanceEvaluationApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-23 09:24:08.311 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.example.performanceevaluation.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2026-01-23 09:24:08.311 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.performanceevaluation.dao]' package. Please check your configuration.
+2026-01-23 09:24:08.568 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-01-23 09:24:08.576 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-23 09:24:08.576 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-01-23 09:24:08.630 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-01-23 09:24:08.630 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 824 ms
+2026-01-23 09:24:09.329 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path ''
+2026-01-23 09:24:09.335 [main] INFO  c.e.p.PerformanceEvaluationApplication - Started PerformanceEvaluationApplication in 1.929 seconds (process running for 2.299)
+2026-01-23 09:37:13.114 [main] INFO  c.e.p.PerformanceEvaluationApplication - Starting PerformanceEvaluationApplication using Java 17.0.15 with PID 22864 (D:\work\performanceEvaluation\target\classes started by code in D:\work\performanceEvaluation)
+2026-01-23 09:37:13.116 [main] DEBUG c.e.p.PerformanceEvaluationApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2026-01-23 09:37:13.116 [main] INFO  c.e.p.PerformanceEvaluationApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-23 09:37:13.722 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.example.performanceevaluation.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2026-01-23 09:37:13.722 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.performanceevaluation.dao]' package. Please check your configuration.
+2026-01-23 09:37:13.979 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-01-23 09:37:13.987 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-23 09:37:13.987 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-01-23 09:37:14.045 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-01-23 09:37:14.045 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 890 ms
+2026-01-23 09:37:14.682 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path ''
+2026-01-23 09:37:14.688 [main] INFO  c.e.p.PerformanceEvaluationApplication - Started PerformanceEvaluationApplication in 1.986 seconds (process running for 2.475)
+2026-01-23 09:37:37.304 [http-nio-8090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-23 09:37:37.304 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-23 09:37:37.304 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-01-23 09:37:37.751 [http-nio-8090-exec-9] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 227 ms
+2026-01-23 09:37:46.402 [http-nio-8090-exec-10] INFO  com.zaxxer.hikari.HikariDataSource - performance-hikari-pool - Starting...
+2026-01-23 09:37:47.518 [http-nio-8090-exec-10] ERROR com.zaxxer.hikari.pool.HikariPool - performance-hikari-pool - Exception during pool initialization.
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:348)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:89)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:64)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:81)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:59)
+	at jdk.proxy2/jdk.proxy2.$Proxy108.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy2/jdk.proxy2.$Proxy80.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:164)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:77)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:152)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy82.selectList(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.IService.list(IService.java:407)
+	at com.baomidou.mybatisplus.extension.service.IService.list(IService.java:428)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:713)
+	at com.example.performanceevaluation.service.impl.UserServiceImpl$$SpringCGLIB$$0.list(<generated>)
+	at com.example.performanceevaluation.controller.UserController.list(UserController.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2026-01-23 09:37:47.522 [http-nio-8090-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.mybatis.spring.MyBatisSystemException] with root cause
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:348)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:89)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:64)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:81)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:59)
+	at jdk.proxy2/jdk.proxy2.$Proxy108.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy2/jdk.proxy2.$Proxy80.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:164)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:77)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:152)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy82.selectList(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.IService.list(IService.java:407)
+	at com.baomidou.mybatisplus.extension.service.IService.list(IService.java:428)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:713)
+	at com.example.performanceevaluation.service.impl.UserServiceImpl$$SpringCGLIB$$0.list(<generated>)
+	at com.example.performanceevaluation.controller.UserController.list(UserController.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2026-01-23 09:39:06.812 [main] INFO  c.e.p.PerformanceEvaluationApplication - Starting PerformanceEvaluationApplication using Java 17.0.15 with PID 476 (D:\work\performanceEvaluation\target\classes started by code in D:\work\performanceEvaluation)
+2026-01-23 09:39:06.813 [main] DEBUG c.e.p.PerformanceEvaluationApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2026-01-23 09:39:06.814 [main] INFO  c.e.p.PerformanceEvaluationApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-23 09:39:07.281 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.example.performanceevaluation.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2026-01-23 09:39:07.281 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.performanceevaluation.dao]' package. Please check your configuration.
+2026-01-23 09:39:07.512 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-01-23 09:39:07.520 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-23 09:39:07.520 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-01-23 09:39:07.572 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-01-23 09:39:07.572 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 730 ms
+2026-01-23 09:39:08.199 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path ''
+2026-01-23 09:39:08.206 [main] INFO  c.e.p.PerformanceEvaluationApplication - Started PerformanceEvaluationApplication in 1.718 seconds (process running for 2.1)
+2026-01-23 09:39:15.952 [http-nio-8090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-23 09:39:15.953 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-23 09:39:15.953 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-01-23 09:39:16.044 [http-nio-8090-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - performance-hikari-pool - Starting...
+2026-01-23 09:39:16.171 [http-nio-8090-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - performance-hikari-pool - Added connection com.mysql.cj.jdbc.ConnectionImpl@7505482
+2026-01-23 09:39:16.173 [http-nio-8090-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - performance-hikari-pool - Start completed.
+2026-01-23 09:39:29.868 [http-nio-8090-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.example.performanceevaluation.pojo.User com.example.performanceevaluation.controller.UserController.create(com.example.performanceevaluation.form.UserCreateForm): [Field error in object 'userCreateForm' on field 'email': rejected value [string]; codes [Email.userCreateForm.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userCreateForm.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@65acd422,.*]; default message [邮箱格式不正确]] ]
+2026-01-23 09:39:39.900 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - performance-hikari-pool - Shutdown initiated...
+2026-01-23 09:39:39.904 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - performance-hikari-pool - Shutdown completed.
+2026-01-23 11:30:29.615 [main] INFO  c.e.p.PerformanceEvaluationApplication - Starting PerformanceEvaluationApplication using Java 17.0.15 with PID 19448 (D:\work\performanceEvaluation\target\classes started by code in D:\work\performanceEvaluation)
+2026-01-23 11:30:29.616 [main] DEBUG c.e.p.PerformanceEvaluationApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2026-01-23 11:30:29.617 [main] INFO  c.e.p.PerformanceEvaluationApplication - The following 1 profile is active: "dev"
+2026-01-23 11:30:30.233 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.example.performanceevaluation.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2026-01-23 11:30:30.235 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.performanceevaluation.dao]' package. Please check your configuration.
+2026-01-23 11:30:30.523 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-01-23 11:30:30.531 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-23 11:30:30.531 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-01-23 11:30:30.581 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-01-23 11:30:30.581 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 930 ms
+2026-01-23 11:30:31.141 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 11 mappings in 'requestMappingHandlerMapping'
+2026-01-23 11:30:31.185 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-01-23 11:30:31.202 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 2 ResponseBodyAdvice
+2026-01-23 11:30:31.224 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 2 ResponseBodyAdvice
+2026-01-23 11:30:31.326 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path ''
+2026-01-23 11:30:31.332 [main] INFO  c.e.p.PerformanceEvaluationApplication - Started PerformanceEvaluationApplication in 2.1 seconds (process running for 2.532)
+2026-01-23 11:30:40.269 [http-nio-8090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-23 11:30:40.269 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-23 11:30:40.269 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-01-23 11:30:40.269 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-01-23 11:30:40.269 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-01-23 11:30:40.269 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4fb18702
+2026-01-23 11:30:40.269 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@3d2925e0
+2026-01-23 11:30:40.269 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-01-23 11:30:40.269 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-01-23 11:30:40.278 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui.html", parameters={}
+2026-01-23 11:30:40.288 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.ui.SwaggerWelcomeWebMvc#redirectToUi(HttpServletRequest)
+2026-01-23 11:30:40.330 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2026-01-23 11:30:40.332 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Nothing to write: null body
+2026-01-23 11:30:40.333 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 302 FOUND
+2026-01-23 11:30:40.352 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-initializer.js", parameters={}
+2026-01-23 11:30:40.354 [http-nio-8090-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-23 11:30:40.372 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-23 11:30:40.455 [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/v3/api-docs/swagger-config", parameters={}
+2026-01-23 11:30:40.456 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2026-01-23 11:30:40.457 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+2026-01-23 11:30:40.458 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://127.0.0.1:8090/swagger-ui/oauth2-re (truncated)...]
+2026-01-23 11:30:40.461 [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-23 11:30:40.484 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/v3/api-docs", parameters={}
+2026-01-23 11:30:40.484 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2026-01-23 11:30:40.764 [http-nio-8090-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 272 ms
+2026-01-23 11:30:40.775 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, */*] and supported [application/json]
+2026-01-23 11:30:40.776 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 48, 46, 49, 34, 44, 34, 105, 110, 10 (truncated)...]
+2026-01-23 11:30:40.776 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-23 11:30:43.965 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/users", parameters={}
+2026-01-23 11:30:43.965 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.performanceevaluation.controller.UserController#list()
+2026-01-23 11:30:43.968 [http-nio-8090-exec-5] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求开始 ==========
+请求方法: GET
+请求URI: /api/users
+请求URL: http://127.0.0.1:8090/api/users
+客户端IP: 127.0.0.1
+请求协议: HTTP/1.1
+请求头:
+  host: 127.0.0.1:8090
+  connection: keep-alive
+  sec-ch-ua-platform: "Windows"
+  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+  accept: */*
+  sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
+  sec-ch-ua-mobile: ?0
+  sec-fetch-site: same-origin
+  sec-fetch-mode: cors
+  sec-fetch-dest: empty
+  referer: http://127.0.0.1:8090/swagger-ui/index.html
+  accept-encoding: gzip, deflate, br, zstd
+  accept-language: zh-CN,zh;q=0.9
+请求参数:
+  (无)
+==============================
+2026-01-23 11:30:44.053 [http-nio-8090-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-23 11:30:45.187 [http-nio-8090-exec-5] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:348)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:89)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:64)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:81)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:59)
+	at jdk.proxy2/jdk.proxy2.$Proxy108.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy2/jdk.proxy2.$Proxy79.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:164)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:77)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:152)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy81.selectList(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.IService.list(IService.java:407)
+	at com.baomidou.mybatisplus.extension.service.IService.list(IService.java:428)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:713)
+	at com.example.performanceevaluation.service.impl.UserServiceImpl$$SpringCGLIB$$0.list(<generated>)
+	at com.example.performanceevaluation.controller.UserController.list(UserController.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2026-01-23 11:30:45.192 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.example.performanceevaluation.exception.GlobalExceptionHandler#handleException(Exception)
+2026-01-23 11:30:45.192 [http-nio-8090-exec-5] ERROR c.e.p.e.GlobalExceptionHandler - 系统异常
+org.mybatis.spring.MyBatisSystemException: null
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:97)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439)
+	at jdk.proxy2/jdk.proxy2.$Proxy79.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:164)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:77)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:152)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy81.selectList(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.IService.list(IService.java:407)
+	at com.baomidou.mybatisplus.extension.service.IService.list(IService.java:428)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:713)
+	at com.example.performanceevaluation.service.impl.UserServiceImpl$$SpringCGLIB$$0.list(<generated>)
+	at com.example.performanceevaluation.controller.UserController.list(UserController.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+### The error may exist in com/example/performanceevaluation/dao/UserMapper.java (best guess)
+### The error may involve com.example.performanceevaluation.dao.UserMapper.selectList
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:156)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	... 67 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:348)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:89)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:64)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:81)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:59)
+	at jdk.proxy2/jdk.proxy2.$Proxy108.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	... 74 common frames omitted
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	... 85 common frames omitted
+2026-01-23 11:30:45.194 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-23 11:30:45.197 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseResult(code=500, status=false, message=系统异常，请联系管理员, data=null)]
+2026-01-23 11:30:45.198 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException]
+2026-01-23 11:30:45.199 [http-nio-8090-exec-5] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求结束 ==========
+请求方法: GET
+请求URI: /api/users
+响应状态码: 500
+耗时: 1232ms
+响应头:
+  Vary: Origin
+  Vary: Origin
+  Vary: Origin
+  Content-Type: application/json
+  Transfer-Encoding: chunked
+  Date: Fri, 23 Jan 2026 03:30:45 GMT
+  Connection: close
+==============================
+2026-01-23 11:30:45.199 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2026-01-23 11:31:15.590 [main] INFO  c.e.p.PerformanceEvaluationApplication - Starting PerformanceEvaluationApplication using Java 17.0.15 with PID 4144 (D:\work\performanceEvaluation\target\classes started by code in D:\work\performanceEvaluation)
+2026-01-23 11:31:15.592 [main] DEBUG c.e.p.PerformanceEvaluationApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2026-01-23 11:31:15.592 [main] INFO  c.e.p.PerformanceEvaluationApplication - The following 1 profile is active: "dev"
+2026-01-23 11:31:16.076 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.example.performanceevaluation.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2026-01-23 11:31:16.077 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.performanceevaluation.dao]' package. Please check your configuration.
+2026-01-23 11:31:16.317 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-01-23 11:31:16.324 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-23 11:31:16.324 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-01-23 11:31:16.373 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-01-23 11:31:16.373 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 750 ms
+2026-01-23 11:31:16.861 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 11 mappings in 'requestMappingHandlerMapping'
+2026-01-23 11:31:16.897 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-01-23 11:31:16.912 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 2 ResponseBodyAdvice
+2026-01-23 11:31:16.933 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 2 ResponseBodyAdvice
+2026-01-23 11:31:17.027 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path ''
+2026-01-23 11:31:17.034 [main] INFO  c.e.p.PerformanceEvaluationApplication - Started PerformanceEvaluationApplication in 1.818 seconds (process running for 2.186)
+2026-01-23 11:31:33.432 [http-nio-8090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-23 11:31:33.432 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-23 11:31:33.432 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-01-23 11:31:33.432 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-01-23 11:31:33.432 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-01-23 11:31:33.433 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2c0b2365
+2026-01-23 11:31:33.433 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@32c2bb88
+2026-01-23 11:31:33.433 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-01-23 11:31:33.433 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-01-23 11:31:33.439 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/users", parameters={}
+2026-01-23 11:31:33.448 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.performanceevaluation.controller.UserController#list()
+2026-01-23 11:31:33.451 [http-nio-8090-exec-1] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求开始 ==========
+请求方法: GET
+请求URI: /api/users
+请求URL: http://127.0.0.1:8090/api/users
+客户端IP: 127.0.0.1
+请求协议: HTTP/1.1
+请求头:
+  host: 127.0.0.1:8090
+  connection: keep-alive
+  sec-ch-ua-platform: "Windows"
+  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+  accept: */*
+  sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
+  sec-ch-ua-mobile: ?0
+  sec-fetch-site: same-origin
+  sec-fetch-mode: cors
+  sec-fetch-dest: empty
+  referer: http://127.0.0.1:8090/swagger-ui/index.html
+  accept-encoding: gzip, deflate, br, zstd
+  accept-language: zh-CN,zh;q=0.9
+请求参数:
+  (无)
+==============================
+2026-01-23 11:31:33.517 [http-nio-8090-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-23 11:31:33.626 [http-nio-8090-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2f3f77d6
+2026-01-23 11:31:33.627 [http-nio-8090-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-23 11:31:33.694 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-23 11:31:33.695 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseResult(code=200, status=true, message=操作成功, data=[User(id=1, username=1, email=111, role=USE (truncated)...]
+2026-01-23 11:31:33.730 [http-nio-8090-exec-1] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求结束 ==========
+请求方法: GET
+请求URI: /api/users
+响应状态码: 200
+耗时: 280ms
+响应头:
+  Vary: Origin
+  Vary: Origin
+  Vary: Origin
+  Content-Type: application/json
+  Transfer-Encoding: chunked
+  Date: Fri, 23 Jan 2026 03:31:33 GMT
+  Keep-Alive: timeout=60
+  Connection: keep-alive
+==============================
+2026-01-23 11:31:33.731 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-23 13:16:00.189 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h10m25s957ms66µs800ns).
+2026-01-23 13:43:37.403 [main] INFO  c.e.p.PerformanceEvaluationApplication - Starting PerformanceEvaluationApplication using Java 17.0.15 with PID 30656 (D:\work\performanceEvaluation\target\classes started by code in D:\work\performanceEvaluation)
+2026-01-23 13:43:37.405 [main] DEBUG c.e.p.PerformanceEvaluationApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2026-01-23 13:43:37.405 [main] INFO  c.e.p.PerformanceEvaluationApplication - The following 1 profile is active: "dev"
+2026-01-23 13:43:37.909 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.example.performanceevaluation.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2026-01-23 13:43:37.909 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.performanceevaluation.dao]' package. Please check your configuration.
+2026-01-23 13:43:38.176 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-01-23 13:43:38.185 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-23 13:43:38.185 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-01-23 13:43:38.244 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-01-23 13:43:38.245 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 813 ms
+2026-01-23 13:43:38.727 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 11 mappings in 'requestMappingHandlerMapping'
+2026-01-23 13:43:38.769 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-01-23 13:43:38.786 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 2 ResponseBodyAdvice
+2026-01-23 13:43:38.807 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 2 ResponseBodyAdvice
+2026-01-23 13:43:38.907 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path ''
+2026-01-23 13:43:38.913 [main] INFO  c.e.p.PerformanceEvaluationApplication - Started PerformanceEvaluationApplication in 1.855 seconds (process running for 2.24)
+2026-01-23 13:43:46.784 [http-nio-8090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-23 13:43:46.784 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-23 13:43:46.784 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-01-23 13:43:46.784 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-01-23 13:43:46.784 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-01-23 13:43:46.785 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4fb18702
+2026-01-23 13:43:46.785 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@3d2925e0
+2026-01-23 13:43:46.785 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-01-23 13:43:46.785 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-01-23 13:43:46.792 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/users", parameters={}
+2026-01-23 13:43:46.800 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.performanceevaluation.controller.UserController#list()
+2026-01-23 13:43:46.804 [http-nio-8090-exec-1] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求开始 ==========
+请求方法: GET
+请求URI: /api/users
+请求URL: http://127.0.0.1:8090/api/users
+客户端IP: 127.0.0.1
+请求协议: HTTP/1.1
+请求头:
+  host: 127.0.0.1:8090
+  connection: keep-alive
+  sec-ch-ua-platform: "Windows"
+  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+  accept: */*
+  sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
+  sec-ch-ua-mobile: ?0
+  sec-fetch-site: same-origin
+  sec-fetch-mode: cors
+  sec-fetch-dest: empty
+  referer: http://127.0.0.1:8090/swagger-ui/index.html
+  accept-encoding: gzip, deflate, br, zstd
+  accept-language: zh-CN,zh;q=0.9
+请求参数:
+  (无)
+==============================
+2026-01-23 13:43:46.872 [http-nio-8090-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-23 13:43:46.979 [http-nio-8090-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6b942447
+2026-01-23 13:43:46.980 [http-nio-8090-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-23 13:43:47.047 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-23 13:43:47.049 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseResult(code=200, status=true, message=操作成功, data=[User(id=1, username=1, email=111, role=USE (truncated)...]
+2026-01-23 13:43:47.082 [http-nio-8090-exec-1] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求结束 ==========
+请求方法: GET
+请求URI: /api/users
+响应状态码: 200
+耗时: 280ms
+响应头:
+  Vary: Origin
+  Vary: Origin
+  Vary: Origin
+  Content-Type: application/json
+  Transfer-Encoding: chunked
+  Date: Fri, 23 Jan 2026 05:43:47 GMT
+  Keep-Alive: timeout=60
+  Connection: keep-alive
+==============================
+2026-01-23 13:43:47.085 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-23 14:14:48.698 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-23 14:14:48.700 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-23 14:41:19.034 [main] INFO  c.e.p.PerformanceEvaluationApplication - Starting PerformanceEvaluationApplication using Java 17.0.15 with PID 19072 (D:\work\performanceEvaluation\target\classes started by code in D:\work\performanceEvaluation)
+2026-01-23 14:41:19.035 [main] DEBUG c.e.p.PerformanceEvaluationApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2026-01-23 14:41:19.035 [main] INFO  c.e.p.PerformanceEvaluationApplication - The following 1 profile is active: "dev"
+2026-01-23 14:41:19.630 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-23 14:41:19.632 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-23 14:41:19.654 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2026-01-23 14:41:19.726 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.example.performanceevaluation.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2026-01-23 14:41:19.727 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.performanceevaluation.dao]' package. Please check your configuration.
+2026-01-23 14:41:20.091 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-01-23 14:41:20.098 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-23 14:41:20.098 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-01-23 14:41:20.162 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-01-23 14:41:20.162 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1095 ms
+2026-01-23 14:41:20.859 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+2026-01-23 14:41:20.909 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-01-23 14:41:20.926 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 2 ResponseBodyAdvice
+2026-01-23 14:41:20.950 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 2 ResponseBodyAdvice
+2026-01-23 14:41:21.107 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path ''
+2026-01-23 14:41:21.116 [main] INFO  c.e.p.PerformanceEvaluationApplication - Started PerformanceEvaluationApplication in 2.521 seconds (process running for 2.981)
+2026-01-23 14:41:21.120 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:41:21.120409600
+2026-01-23 14:41:21.122 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:41:21.122411500
+2026-01-23 14:41:25.006 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:41:25.006495100
+2026-01-23 14:41:26.123 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:41:26.123414500
+2026-01-23 14:41:30.010 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:41:30.010532200
+2026-01-23 14:41:31.123 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:41:31.123543700
+2026-01-23 14:41:31.139 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:41:31.139546500
+2026-01-23 14:41:35.013 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:41:35.013067500
+2026-01-23 14:41:36.150 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:41:36.150481800
+2026-01-23 14:41:40.015 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:41:40.015606800
+2026-01-23 14:41:41.126 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:41:41.126306100
+2026-01-23 14:41:41.157 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:41:41.157666
+2026-01-23 14:41:45.005 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:41:45.005649300
+2026-01-23 14:41:46.159 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:41:46.159997400
+2026-01-23 14:41:50.011 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:41:50.011764300
+2026-01-23 14:41:51.121 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:41:51.121493400
+2026-01-23 14:41:51.167 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:41:51.167550700
+2026-01-23 14:41:55.008 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:41:55.008614800
+2026-01-23 14:41:56.179 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:41:56.179011300
+2026-01-23 14:42:00.005 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:42:00.005839
+2026-01-23 14:42:00.007 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务2执行: 2026-01-23T14:42:00.007167300
+2026-01-23 14:42:01.116 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:42:01.116605800
+2026-01-23 14:42:01.194 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:42:01.194348900
+2026-01-23 14:42:05.007 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:42:05.007639800
+2026-01-23 14:42:06.198 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:42:06.198087500
+2026-01-23 14:42:10.004 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:42:10.004735900
+2026-01-23 14:42:11.118 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:42:11.118747700
+2026-01-23 14:42:11.211 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:42:11.211060900
+2026-01-23 14:42:15.005 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:42:15.005724600
+2026-01-23 14:42:16.216 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:42:16.216847500
+2026-01-23 14:42:20.011 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:42:20.011335600
+2026-01-23 14:42:21.119 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:42:21.119181800
+2026-01-23 14:42:21.227 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:42:21.227188200
+2026-01-23 14:42:25.013 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:42:25.013840100
+2026-01-23 14:42:26.237 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:42:26.237016600
+2026-01-23 14:42:30.009 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:42:30.009263500
+2026-01-23 14:42:31.117 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:42:31.117578
+2026-01-23 14:42:31.246 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:42:31.246422200
+2026-01-23 14:42:35.012 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:42:35.012368500
+2026-01-23 14:42:36.250 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:42:36.250919300
+2026-01-23 14:42:40.010 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:42:40.010682600
+2026-01-23 14:42:41.117 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:42:41.117376700
+2026-01-23 14:42:41.258 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:42:41.258614800
+2026-01-23 14:42:45.010 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:42:45.010597
+2026-01-23 14:42:46.264 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:42:46.264411900
+2026-01-23 14:42:50.003 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:42:50.003918300
+2026-01-23 14:42:51.125 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:42:51.125334700
+2026-01-23 14:42:51.265 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:42:51.265669800
+2026-01-23 14:42:55.003 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:42:55.003127200
+2026-01-23 14:42:56.266 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:42:56.266723900
+2026-01-23 14:43:00.010 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务2执行: 2026-01-23T14:43:00.010136800
+2026-01-23 14:43:00.010 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:43:00.010136800
+2026-01-23 14:43:01.122 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:43:01.122125900
+2026-01-23 14:43:01.274 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:43:01.274821
+2026-01-23 14:43:05.009 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:43:05.009605500
+2026-01-23 14:43:06.288 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:43:06.288907800
+2026-01-23 14:43:10.009 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:43:10.009507600
+2026-01-23 14:43:11.120 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:43:11.120426
+2026-01-23 14:43:11.308 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:43:11.308139900
+2026-01-23 14:43:15.009 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:43:15.009653300
+2026-01-23 14:43:16.314 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:43:16.314735100
+2026-01-23 14:43:20.002 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:43:20.002130100
+2026-01-23 14:43:21.115 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:43:21.115446500
+2026-01-23 14:43:21.325 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:43:21.325717500
+2026-01-23 14:43:25.002 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:43:25.002134200
+2026-01-23 14:43:26.328 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:43:26.328387300
+2026-01-23 14:43:30.014 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:43:30.014707300
+2026-01-23 14:43:31.119 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:43:31.119945900
+2026-01-23 14:43:31.335 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:43:31.335286600
+2026-01-23 14:43:35.003 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:43:35.003655500
+2026-01-23 14:43:36.342 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:43:36.342545200
+2026-01-23 14:43:40.008 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:43:40.008637800
+2026-01-23 14:43:41.119 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:43:41.119729600
+2026-01-23 14:43:41.356 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:43:41.356393600
+2026-01-23 14:43:45.002 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:43:45.002025
+2026-01-23 14:43:46.371 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:43:46.371051200
+2026-01-23 14:43:50.008 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:43:50.008270300
+2026-01-23 14:43:51.117 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:43:51.117234900
+2026-01-23 14:43:51.376 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:43:51.376838800
+2026-01-23 14:43:55.007 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:43:55.007841800
+2026-01-23 14:43:56.378 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:43:56.378085300
+2026-01-23 14:44:00.001 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:44:00.001039400
+2026-01-23 14:44:00.001 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务2执行: 2026-01-23T14:44:00.001039400
+2026-01-23 14:44:01.126 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:44:01.126056900
+2026-01-23 14:44:01.383 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:44:01.383024300
+2026-01-23 14:44:05.014 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:44:05.014961800
+2026-01-23 14:44:06.385 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:44:06.385198600
+2026-01-23 14:44:10.002 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:44:10.002910600
+2026-01-23 14:44:11.128 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:44:11.128571
+2026-01-23 14:44:11.389 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:44:11.389568600
+2026-01-23 14:44:15.001 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:44:15.001151600
+2026-01-23 14:44:16.396 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:44:16.396970600
+2026-01-23 14:44:20.000 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:44:20.000527500
+2026-01-23 14:44:21.125 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:44:21.125804400
+2026-01-23 14:44:21.403 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:44:21.403180300
+2026-01-23 14:44:25.000 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:44:25.000781300
+2026-01-23 14:44:26.412 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:44:26.412153500
+2026-01-23 14:44:30.011 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:44:30.011676500
+2026-01-23 14:44:31.129 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:44:31.129497600
+2026-01-23 14:44:31.426 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:44:31.426377
+2026-01-23 14:44:35.013 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:44:35.013876900
+2026-01-23 14:44:36.436 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:44:36.436868400
+2026-01-23 14:44:40.002 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:44:40.002713800
+2026-01-23 14:44:41.129 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:44:41.129098100
+2026-01-23 14:44:41.443 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:44:41.443023900
+2026-01-23 14:44:45.000 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:44:45.000701200
+2026-01-23 14:44:46.455 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:44:46.455886700
+2026-01-23 14:44:50.010 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:44:50.010640400
+2026-01-23 14:44:51.115 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:44:51.115469600
+2026-01-23 14:44:51.464 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:44:51.464542800
+2026-01-23 14:44:55.004 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:44:55.004523600
+2026-01-23 14:44:56.471 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:44:56.471577200
+2026-01-23 14:45:00.013 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务2执行: 2026-01-23T14:45:00.013357300
+2026-01-23 14:45:00.013 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:45:00.013357300
+2026-01-23 14:45:01.118 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务5执行（固定频率）: 2026-01-23T14:45:01.118415100
+2026-01-23 14:45:01.478 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:45:01.478312400
+2026-01-23 14:45:05.014 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务1执行: 2026-01-23T14:45:05.014119
+2026-01-23 14:45:06.493 [scheduling-1] INFO  c.e.p.task.ScheduledTask - 定时任务4执行（固定延迟）: 2026-01-23T14:45:06.493590300
+2026-01-23 15:07:51.694 [main] INFO  c.e.p.PerformanceEvaluationApplication - Starting PerformanceEvaluationApplication using Java 17.0.15 with PID 22340 (D:\work\performanceEvaluation\target\classes started by code in D:\work\performanceEvaluation)
+2026-01-23 15:07:51.695 [main] DEBUG c.e.p.PerformanceEvaluationApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2026-01-23 15:07:51.696 [main] INFO  c.e.p.PerformanceEvaluationApplication - The following 1 profile is active: "dev"
+2026-01-23 15:07:52.204 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-23 15:07:52.205 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-23 15:07:52.226 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2026-01-23 15:07:52.287 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.example.performanceevaluation.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2026-01-23 15:07:52.287 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.performanceevaluation.dao]' package. Please check your configuration.
+2026-01-23 15:07:52.596 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-01-23 15:07:52.602 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-23 15:07:52.602 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-01-23 15:07:52.654 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-01-23 15:07:52.655 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 934 ms
+2026-01-23 15:07:53.303 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+2026-01-23 15:07:53.344 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-01-23 15:07:53.360 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 2 ResponseBodyAdvice
+2026-01-23 15:07:53.384 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 2 ResponseBodyAdvice
+2026-01-23 15:07:53.520 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path ''
+2026-01-23 15:07:53.527 [main] INFO  c.e.p.PerformanceEvaluationApplication - Started PerformanceEvaluationApplication in 2.182 seconds (process running for 2.574)
+2026-01-23 15:10:53.977 [http-nio-8090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-23 15:10:53.977 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-23 15:10:53.979 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-01-23 15:10:53.979 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-01-23 15:10:53.979 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-01-23 15:10:53.979 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@51726621
+2026-01-23 15:10:53.979 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@260887b
+2026-01-23 15:10:53.979 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-01-23 15:10:53.979 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-01-23 15:10:53.988 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui.html", parameters={}
+2026-01-23 15:10:53.997 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.ui.SwaggerWelcomeWebMvc#redirectToUi(HttpServletRequest)
+2026-01-23 15:10:54.032 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2026-01-23 15:10:54.033 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Nothing to write: null body
+2026-01-23 15:10:54.035 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 302 FOUND
+2026-01-23 15:10:54.038 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/index.html", parameters={}
+2026-01-23 15:10:54.040 [http-nio-8090-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-23 15:10:54.042 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2026-01-23 15:10:54.057 [http-nio-8090-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui.css", parameters={}
+2026-01-23 15:10:54.057 [http-nio-8090-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-23 15:10:54.058 [http-nio-8090-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2026-01-23 15:10:54.059 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-initializer.js", parameters={}
+2026-01-23 15:10:54.059 [http-nio-8090-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/index.css", parameters={}
+2026-01-23 15:10:54.059 [http-nio-8090-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-23 15:10:54.059 [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui-bundle.js", parameters={}
+2026-01-23 15:10:54.059 [http-nio-8090-exec-8] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-23 15:10:54.059 [http-nio-8090-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
+2026-01-23 15:10:54.060 [http-nio-8090-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-23 15:10:54.060 [http-nio-8090-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-23 15:10:54.060 [http-nio-8090-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2026-01-23 15:10:54.061 [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2026-01-23 15:10:54.061 [http-nio-8090-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2026-01-23 15:10:54.080 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-23 15:10:54.163 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/v3/api-docs/swagger-config", parameters={}
+2026-01-23 15:10:54.164 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2026-01-23 15:10:54.165 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+2026-01-23 15:10:54.165 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://127.0.0.1:8090/swagger-ui/oauth2-re (truncated)...]
+2026-01-23 15:10:54.169 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-23 15:10:54.191 [http-nio-8090-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/v3/api-docs", parameters={}
+2026-01-23 15:10:54.192 [http-nio-8090-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2026-01-23 15:10:54.579 [http-nio-8090-exec-9] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 376 ms
+2026-01-23 15:10:54.594 [http-nio-8090-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, */*] and supported [application/json]
+2026-01-23 15:10:54.595 [http-nio-8090-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 48, 46, 49, 34, 44, 34, 105, 110, 10 (truncated)...]
+2026-01-23 15:10:54.595 [http-nio-8090-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-23 15:11:39.709 [http-nio-8090-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/users", parameters={}
+2026-01-23 15:11:39.709 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.performanceevaluation.controller.UserController#list()
+2026-01-23 15:11:39.712 [http-nio-8090-exec-7] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求开始 ==========
+请求方法: GET
+请求URI: /api/users
+请求URL: http://127.0.0.1:8090/api/users
+客户端IP: 127.0.0.1
+请求协议: HTTP/1.1
+请求头:
+  host: 127.0.0.1:8090
+  connection: keep-alive
+  sec-ch-ua-platform: "Windows"
+  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+  accept: */*
+  sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
+  sec-ch-ua-mobile: ?0
+  sec-fetch-site: same-origin
+  sec-fetch-mode: cors
+  sec-fetch-dest: empty
+  referer: http://127.0.0.1:8090/swagger-ui/index.html
+  accept-encoding: gzip, deflate, br, zstd
+  accept-language: zh-CN,zh;q=0.9
+请求参数:
+  (无)
+==============================
+2026-01-23 15:11:39.791 [http-nio-8090-exec-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-23 15:11:39.923 [http-nio-8090-exec-7] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4879c3ce
+2026-01-23 15:11:39.924 [http-nio-8090-exec-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-23 15:11:40.054 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.example.performanceevaluation.exception.GlobalExceptionHandler#handleException(Exception)
+2026-01-23 15:11:40.054 [http-nio-8090-exec-7] ERROR c.e.p.e.GlobalExceptionHandler - 系统异常
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'password' in 'field list'
+### The error may exist in com/example/performanceevaluation/dao/UserMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT  id,username,password,salt,email,role,created_at,updated_at  FROM sys_user
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'password' in 'field list'
+; bad SQL grammar []
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:246)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439)
+	at jdk.proxy2/jdk.proxy2.$Proxy82.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:164)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:77)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:152)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy84.selectList(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.IService.list(IService.java:407)
+	at com.baomidou.mybatisplus.extension.service.IService.list(IService.java:428)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:713)
+	at com.example.performanceevaluation.service.impl.UserServiceImpl$$SpringCGLIB$$0.list(<generated>)
+	at com.example.performanceevaluation.controller.UserController.list(UserController.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'password' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58)
+	at jdk.proxy3/jdk.proxy3.$Proxy123.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:80)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at jdk.proxy2/jdk.proxy2.$Proxy121.query(Unknown Source)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:65)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:81)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:59)
+	at jdk.proxy2/jdk.proxy2.$Proxy120.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	... 67 common frames omitted
+2026-01-23 15:11:40.058 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-23 15:11:40.058 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseResult(code=500, status=false, message=系统异常，请联系管理员, data=null)]
+2026-01-23 15:11:40.058 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.jdbc.BadSqlGrammarException: <EOL><EOL>### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'password' in 'field list'<EOL><EOL>### The error may exist in com/example/performanceevaluation/dao/UserMapper.java (best guess)<EOL><EOL>### The error may involve defaultParameterMap<EOL><EOL>### The error occurred while setting parameters<EOL><EOL>### SQL: SELECT  id,username,password,salt,email,role,created_at,updated_at  FROM sys_user<EOL><EOL>### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'password' in 'field list'<EOL>; bad SQL grammar []]
+2026-01-23 15:11:40.062 [http-nio-8090-exec-7] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求结束 ==========
+请求方法: GET
+请求URI: /api/users
+响应状态码: 500
+耗时: 349ms
+响应头:
+  Vary: Origin
+  Vary: Origin
+  Vary: Origin
+  Content-Type: application/json
+  Transfer-Encoding: chunked
+  Date: Fri, 23 Jan 2026 07:11:40 GMT
+  Connection: close
+==============================
+2026-01-23 15:11:40.069 [http-nio-8090-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2026-01-23 15:18:59.335 [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/index.html", parameters={}
+2026-01-23 15:18:59.336 [http-nio-8090-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-23 15:18:59.337 [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2026-01-23 15:18:59.349 [http-nio-8090-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-initializer.js", parameters={}
+2026-01-23 15:18:59.349 [http-nio-8090-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-23 15:18:59.352 [http-nio-8090-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-23 15:18:59.408 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/v3/api-docs/swagger-config", parameters={}
+2026-01-23 15:18:59.408 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2026-01-23 15:18:59.409 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+2026-01-23 15:18:59.409 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://127.0.0.1:8090/swagger-ui/oauth2-re (truncated)...]
+2026-01-23 15:18:59.409 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-23 15:18:59.428 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/favicon-32x32.png", parameters={}
+2026-01-23 15:18:59.429 [http-nio-8090-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-23 15:18:59.431 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2026-01-23 15:18:59.441 [http-nio-8090-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/v3/api-docs", parameters={}
+2026-01-23 15:18:59.441 [http-nio-8090-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2026-01-23 15:18:59.445 [http-nio-8090-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, */*] and supported [application/json]
+2026-01-23 15:18:59.445 [http-nio-8090-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 48, 46, 49, 34, 44, 34, 105, 110, 10 (truncated)...]
+2026-01-23 15:18:59.445 [http-nio-8090-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-23 15:19:04.853 [http-nio-8090-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/users", parameters={}
+2026-01-23 15:19:04.853 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.performanceevaluation.controller.UserController#list()
+2026-01-23 15:19:04.853 [http-nio-8090-exec-7] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求开始 ==========
+请求方法: GET
+请求URI: /api/users
+请求URL: http://127.0.0.1:8090/api/users
+客户端IP: 127.0.0.1
+请求协议: HTTP/1.1
+请求头:
+  host: 127.0.0.1:8090
+  connection: keep-alive
+  sec-ch-ua-platform: "Windows"
+  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+  accept: */*
+  sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
+  sec-ch-ua-mobile: ?0
+  sec-fetch-site: same-origin
+  sec-fetch-mode: cors
+  sec-fetch-dest: empty
+  referer: http://127.0.0.1:8090/swagger-ui/index.html
+  accept-encoding: gzip, deflate, br, zstd
+  accept-language: zh-CN,zh;q=0.9
+请求参数:
+  (无)
+==============================
+2026-01-23 15:19:04.857 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.example.performanceevaluation.exception.GlobalExceptionHandler#handleException(Exception)
+2026-01-23 15:19:04.857 [http-nio-8090-exec-7] ERROR c.e.p.e.GlobalExceptionHandler - 系统异常
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'salt' in 'field list'
+### The error may exist in com/example/performanceevaluation/dao/UserMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT  id,username,password,salt,email,role,created_at,updated_at  FROM sys_user
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'salt' in 'field list'
+; bad SQL grammar []
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:246)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439)
+	at jdk.proxy2/jdk.proxy2.$Proxy82.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:164)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:77)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:152)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy84.selectList(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.IService.list(IService.java:407)
+	at com.baomidou.mybatisplus.extension.service.IService.list(IService.java:428)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:713)
+	at com.example.performanceevaluation.service.impl.UserServiceImpl$$SpringCGLIB$$0.list(<generated>)
+	at com.example.performanceevaluation.controller.UserController.list(UserController.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'salt' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58)
+	at jdk.proxy3/jdk.proxy3.$Proxy123.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:80)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at jdk.proxy2/jdk.proxy2.$Proxy121.query(Unknown Source)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:65)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:81)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:59)
+	at jdk.proxy2/jdk.proxy2.$Proxy120.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	... 67 common frames omitted
+2026-01-23 15:19:04.859 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-23 15:19:04.859 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseResult(code=500, status=false, message=系统异常，请联系管理员, data=null)]
+2026-01-23 15:19:04.861 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.jdbc.BadSqlGrammarException: <EOL><EOL>### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'salt' in 'field list'<EOL><EOL>### The error may exist in com/example/performanceevaluation/dao/UserMapper.java (best guess)<EOL><EOL>### The error may involve defaultParameterMap<EOL><EOL>### The error occurred while setting parameters<EOL><EOL>### SQL: SELECT  id,username,password,salt,email,role,created_at,updated_at  FROM sys_user<EOL><EOL>### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'salt' in 'field list'<EOL>; bad SQL grammar []]
+2026-01-23 15:19:04.861 [http-nio-8090-exec-7] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求结束 ==========
+请求方法: GET
+请求URI: /api/users
+响应状态码: 500
+耗时: 8ms
+响应头:
+  Vary: Origin
+  Vary: Origin
+  Vary: Origin
+  Content-Type: application/json
+  Transfer-Encoding: chunked
+  Date: Fri, 23 Jan 2026 07:19:04 GMT
+  Connection: close
+==============================
+2026-01-23 15:19:04.861 [http-nio-8090-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2026-01-23 15:21:18.613 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-23 15:21:18.620 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-23 15:21:41.681 [main] INFO  c.e.p.PerformanceEvaluationApplication - Starting PerformanceEvaluationApplication using Java 17.0.15 with PID 25080 (D:\work\performanceEvaluation\target\classes started by code in D:\work\performanceEvaluation)
+2026-01-23 15:21:41.683 [main] DEBUG c.e.p.PerformanceEvaluationApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2026-01-23 15:21:41.683 [main] INFO  c.e.p.PerformanceEvaluationApplication - The following 1 profile is active: "dev"
+2026-01-23 15:21:42.183 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-23 15:21:42.184 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-23 15:21:42.205 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2026-01-23 15:21:42.267 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.example.performanceevaluation.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2026-01-23 15:21:42.268 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.performanceevaluation.dao]' package. Please check your configuration.
+2026-01-23 15:21:42.580 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-01-23 15:21:42.588 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-23 15:21:42.588 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-01-23 15:21:42.642 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-01-23 15:21:42.642 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 930 ms
+2026-01-23 15:21:43.306 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+2026-01-23 15:21:43.351 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-01-23 15:21:43.368 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 2 ResponseBodyAdvice
+2026-01-23 15:21:43.391 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 2 ResponseBodyAdvice
+2026-01-23 15:21:43.531 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path ''
+2026-01-23 15:21:43.537 [main] INFO  c.e.p.PerformanceEvaluationApplication - Started PerformanceEvaluationApplication in 2.181 seconds (process running for 2.587)
+2026-01-23 15:21:49.470 [http-nio-8090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-23 15:21:49.470 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-23 15:21:49.470 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-01-23 15:21:49.470 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-01-23 15:21:49.470 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-01-23 15:21:49.471 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@593c844d
+2026-01-23 15:21:49.471 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@4eab6fce
+2026-01-23 15:21:49.471 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-01-23 15:21:49.471 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-01-23 15:21:49.477 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/users", parameters={}
+2026-01-23 15:21:49.483 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.performanceevaluation.controller.UserController#list()
+2026-01-23 15:21:49.486 [http-nio-8090-exec-1] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求开始 ==========
+请求方法: GET
+请求URI: /api/users
+请求URL: http://127.0.0.1:8090/api/users
+客户端IP: 127.0.0.1
+请求协议: HTTP/1.1
+请求头:
+  host: 127.0.0.1:8090
+  connection: keep-alive
+  sec-ch-ua-platform: "Windows"
+  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+  accept: */*
+  sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
+  sec-ch-ua-mobile: ?0
+  sec-fetch-site: same-origin
+  sec-fetch-mode: cors
+  sec-fetch-dest: empty
+  referer: http://127.0.0.1:8090/swagger-ui/index.html
+  accept-encoding: gzip, deflate, br, zstd
+  accept-language: zh-CN,zh;q=0.9
+请求参数:
+  (无)
+==============================
+2026-01-23 15:21:49.547 [http-nio-8090-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-23 15:21:49.657 [http-nio-8090-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d1e1c12
+2026-01-23 15:21:49.658 [http-nio-8090-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-23 15:21:49.767 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.example.performanceevaluation.exception.GlobalExceptionHandler#handleException(Exception)
+2026-01-23 15:21:49.767 [http-nio-8090-exec-1] ERROR c.e.p.e.GlobalExceptionHandler - 系统异常
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'salt' in 'field list'
+### The error may exist in com/example/performanceevaluation/dao/UserMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT  id,username,password,salt,email,role,created_at,updated_at  FROM sys_user
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'salt' in 'field list'
+; bad SQL grammar []
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:246)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:92)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:439)
+	at jdk.proxy2/jdk.proxy2.$Proxy82.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:164)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:77)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:152)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy2/jdk.proxy2.$Proxy84.selectList(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.IService.list(IService.java:407)
+	at com.baomidou.mybatisplus.extension.service.IService.list(IService.java:428)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:713)
+	at com.example.performanceevaluation.service.impl.UserServiceImpl$$SpringCGLIB$$0.list(<generated>)
+	at com.example.performanceevaluation.controller.UserController.list(UserController.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'salt' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58)
+	at jdk.proxy3/jdk.proxy3.$Proxy114.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:80)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61)
+	at jdk.proxy2/jdk.proxy2.$Proxy112.query(Unknown Source)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:65)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:81)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:59)
+	at jdk.proxy2/jdk.proxy2.$Proxy111.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	... 67 common frames omitted
+2026-01-23 15:21:49.805 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-23 15:21:49.806 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseResult(code=500, status=false, message=系统异常，请联系管理员, data=null)]
+2026-01-23 15:21:49.819 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.jdbc.BadSqlGrammarException: <EOL><EOL>### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'salt' in 'field list'<EOL><EOL>### The error may exist in com/example/performanceevaluation/dao/UserMapper.java (best guess)<EOL><EOL>### The error may involve defaultParameterMap<EOL><EOL>### The error occurred while setting parameters<EOL><EOL>### SQL: SELECT  id,username,password,salt,email,role,created_at,updated_at  FROM sys_user<EOL><EOL>### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'salt' in 'field list'<EOL>; bad SQL grammar []]
+2026-01-23 15:21:49.820 [http-nio-8090-exec-1] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求结束 ==========
+请求方法: GET
+请求URI: /api/users
+响应状态码: 500
+耗时: 335ms
+响应头:
+  Vary: Origin
+  Vary: Origin
+  Vary: Origin
+  Content-Type: application/json
+  Transfer-Encoding: chunked
+  Date: Fri, 23 Jan 2026 07:21:49 GMT
+  Connection: close
+==============================
+2026-01-23 15:21:49.820 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2026-01-23 15:22:00.963 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-23 15:22:00.966 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-23 15:22:04.797 [main] INFO  c.e.p.PerformanceEvaluationApplication - Starting PerformanceEvaluationApplication using Java 17.0.15 with PID 2628 (D:\work\performanceEvaluation\target\classes started by code in D:\work\performanceEvaluation)
+2026-01-23 15:22:04.798 [main] DEBUG c.e.p.PerformanceEvaluationApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2026-01-23 15:22:04.798 [main] INFO  c.e.p.PerformanceEvaluationApplication - The following 1 profile is active: "dev"
+2026-01-23 15:22:05.283 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-23 15:22:05.285 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-23 15:22:05.308 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2026-01-23 15:22:05.375 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.example.performanceevaluation.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2026-01-23 15:22:05.375 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.performanceevaluation.dao]' package. Please check your configuration.
+2026-01-23 15:22:05.695 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-01-23 15:22:05.703 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-23 15:22:05.703 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-01-23 15:22:05.762 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-01-23 15:22:05.762 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 937 ms
+2026-01-23 15:22:06.429 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+2026-01-23 15:22:06.477 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-01-23 15:22:06.497 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 2 ResponseBodyAdvice
+2026-01-23 15:22:06.517 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 2 ResponseBodyAdvice
+2026-01-23 15:22:06.646 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path ''
+2026-01-23 15:22:06.653 [main] INFO  c.e.p.PerformanceEvaluationApplication - Started PerformanceEvaluationApplication in 2.195 seconds (process running for 2.564)
+2026-01-23 15:22:10.830 [http-nio-8090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-23 15:22:10.830 [http-nio-8090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-23 15:22:10.830 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-01-23 15:22:10.830 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-01-23 15:22:10.830 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-01-23 15:22:10.831 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2fb58560
+2026-01-23 15:22:10.831 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@384a71c9
+2026-01-23 15:22:10.831 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-01-23 15:22:10.831 [http-nio-8090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-01-23 15:22:10.839 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/index.html", parameters={}
+2026-01-23 15:22:10.844 [http-nio-8090-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-23 15:22:10.859 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2026-01-23 15:22:10.869 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-initializer.js", parameters={}
+2026-01-23 15:22:10.871 [http-nio-8090-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-23 15:22:10.895 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-23 15:22:10.933 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/v3/api-docs/swagger-config", parameters={}
+2026-01-23 15:22:10.934 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2026-01-23 15:22:10.947 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+2026-01-23 15:22:10.948 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://127.0.0.1:8090/swagger-ui/oauth2-re (truncated)...]
+2026-01-23 15:22:10.952 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-23 15:22:10.962 [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/v3/api-docs", parameters={}
+2026-01-23 15:22:10.962 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2026-01-23 15:22:11.311 [http-nio-8090-exec-3] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 340 ms
+2026-01-23 15:22:11.325 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, */*] and supported [application/json]
+2026-01-23 15:22:11.328 [http-nio-8090-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 48, 46, 49, 34, 44, 34, 105, 110, 10 (truncated)...]
+2026-01-23 15:22:11.328 [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-23 15:22:20.903 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/users", parameters={}
+2026-01-23 15:22:20.903 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.performanceevaluation.controller.UserController#list()
+2026-01-23 15:22:20.906 [http-nio-8090-exec-5] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求开始 ==========
+请求方法: GET
+请求URI: /api/users
+请求URL: http://127.0.0.1:8090/api/users
+客户端IP: 127.0.0.1
+请求协议: HTTP/1.1
+请求头:
+  host: 127.0.0.1:8090
+  connection: keep-alive
+  sec-ch-ua-platform: "Windows"
+  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+  accept: */*
+  sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
+  sec-ch-ua-mobile: ?0
+  sec-fetch-site: same-origin
+  sec-fetch-mode: cors
+  sec-fetch-dest: empty
+  referer: http://127.0.0.1:8090/swagger-ui/index.html
+  accept-encoding: gzip, deflate, br, zstd
+  accept-language: zh-CN,zh;q=0.9
+请求参数:
+  (无)
+==============================
+2026-01-23 15:22:20.975 [http-nio-8090-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-23 15:22:21.087 [http-nio-8090-exec-5] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18ffa0bd
+2026-01-23 15:22:21.089 [http-nio-8090-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-23 15:22:21.139 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-23 15:22:21.141 [http-nio-8090-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseResult(code=200, status=true, message=操作成功, data=[User(id=1, username=1, password=123456, em (truncated)...]
+2026-01-23 15:22:21.145 [http-nio-8090-exec-5] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求结束 ==========
+请求方法: GET
+请求URI: /api/users
+响应状态码: 200
+耗时: 240ms
+响应头:
+  Vary: Origin
+  Vary: Origin
+  Vary: Origin
+  Content-Type: application/json
+  Transfer-Encoding: chunked
+  Date: Fri, 23 Jan 2026 07:22:21 GMT
+  Keep-Alive: timeout=60
+  Connection: keep-alive
+==============================
+2026-01-23 15:22:21.145 [http-nio-8090-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-23 15:22:52.331 [http-nio-8090-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/auth/login", parameters={}
+2026-01-23 15:22:52.332 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.performanceevaluation.controller.AuthController#login(LoginForm)
+2026-01-23 15:22:52.332 [http-nio-8090-exec-7] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求开始 ==========
+请求方法: POST
+请求URI: /api/auth/login
+请求URL: http://127.0.0.1:8090/api/auth/login
+客户端IP: 127.0.0.1
+请求协议: HTTP/1.1
+请求头:
+  host: 127.0.0.1:8090
+  connection: keep-alive
+  content-length: 49
+  sec-ch-ua-platform: "Windows"
+  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+  accept: */*
+  sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
+  content-type: application/json
+  sec-ch-ua-mobile: ?0
+  origin: http://127.0.0.1:8090
+  sec-fetch-site: same-origin
+  sec-fetch-mode: cors
+  sec-fetch-dest: empty
+  referer: http://127.0.0.1:8090/swagger-ui/index.html
+  accept-encoding: gzip, deflate, br, zstd
+  accept-language: zh-CN,zh;q=0.9
+请求参数:
+  (无)
+==============================
+2026-01-23 15:22:52.341 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [LoginForm(username=admin, password=123456)]
+2026-01-23 15:22:52.402 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.example.performanceevaluation.exception.GlobalExceptionHandler#handleBusinessException(BusinessException)
+2026-01-23 15:22:52.402 [http-nio-8090-exec-7] WARN  c.e.p.e.GlobalExceptionHandler - 业务异常: 用户名或密码错误
+2026-01-23 15:22:52.403 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-23 15:22:52.403 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseResult(code=401, status=false, message=用户名或密码错误, data=null)]
+2026-01-23 15:22:52.404 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.example.performanceevaluation.exception.BusinessException: 用户名或密码错误]
+2026-01-23 15:22:52.404 [http-nio-8090-exec-7] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求结束 ==========
+请求方法: POST
+请求URI: /api/auth/login
+响应状态码: 200
+耗时: 72ms
+响应头:
+  Vary: Origin
+  Vary: Origin
+  Vary: Origin
+  Content-Type: application/json
+  Transfer-Encoding: chunked
+  Date: Fri, 23 Jan 2026 07:22:52 GMT
+  Keep-Alive: timeout=60
+  Connection: keep-alive
+==============================
+2026-01-23 15:22:52.404 [http-nio-8090-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-23 15:24:08.265 [http-nio-8090-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/auth/login", parameters={}
+2026-01-23 15:24:08.265 [http-nio-8090-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.performanceevaluation.controller.AuthController#login(LoginForm)
+2026-01-23 15:24:08.265 [http-nio-8090-exec-8] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求开始 ==========
+请求方法: POST
+请求URI: /api/auth/login
+请求URL: http://127.0.0.1:8090/api/auth/login
+客户端IP: 127.0.0.1
+请求协议: HTTP/1.1
+请求头:
+  host: 127.0.0.1:8090
+  connection: keep-alive
+  content-length: 49
+  sec-ch-ua-platform: "Windows"
+  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+  accept: */*
+  sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
+  content-type: application/json
+  sec-ch-ua-mobile: ?0
+  origin: http://127.0.0.1:8090
+  sec-fetch-site: same-origin
+  sec-fetch-mode: cors
+  sec-fetch-dest: empty
+  referer: http://127.0.0.1:8090/swagger-ui/index.html
+  accept-encoding: gzip, deflate, br, zstd
+  accept-language: zh-CN,zh;q=0.9
+请求参数:
+  (无)
+==============================
+2026-01-23 15:24:08.266 [http-nio-8090-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [LoginForm(username=admin, password=123456)]
+2026-01-23 15:24:08.269 [http-nio-8090-exec-8] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.example.performanceevaluation.exception.GlobalExceptionHandler#handleBusinessException(BusinessException)
+2026-01-23 15:24:08.269 [http-nio-8090-exec-8] WARN  c.e.p.e.GlobalExceptionHandler - 业务异常: 用户名或密码错误
+2026-01-23 15:24:08.269 [http-nio-8090-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-23 15:24:08.269 [http-nio-8090-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseResult(code=401, status=false, message=用户名或密码错误, data=null)]
+2026-01-23 15:24:08.269 [http-nio-8090-exec-8] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.example.performanceevaluation.exception.BusinessException: 用户名或密码错误]
+2026-01-23 15:24:08.269 [http-nio-8090-exec-8] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求结束 ==========
+请求方法: POST
+请求URI: /api/auth/login
+响应状态码: 200
+耗时: 4ms
+响应头:
+  Vary: Origin
+  Vary: Origin
+  Vary: Origin
+  Content-Type: application/json
+  Transfer-Encoding: chunked
+  Date: Fri, 23 Jan 2026 07:24:08 GMT
+  Keep-Alive: timeout=60
+  Connection: keep-alive
+==============================
+2026-01-23 15:24:08.269 [http-nio-8090-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-23 15:24:10.397 [http-nio-8090-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/auth/login", parameters={}
+2026-01-23 15:24:10.397 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.performanceevaluation.controller.AuthController#login(LoginForm)
+2026-01-23 15:24:10.398 [http-nio-8090-exec-10] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求开始 ==========
+请求方法: POST
+请求URI: /api/auth/login
+请求URL: http://127.0.0.1:8090/api/auth/login
+客户端IP: 127.0.0.1
+请求协议: HTTP/1.1
+请求头:
+  host: 127.0.0.1:8090
+  connection: keep-alive
+  content-length: 49
+  sec-ch-ua-platform: "Windows"
+  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+  accept: */*
+  sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
+  content-type: application/json
+  sec-ch-ua-mobile: ?0
+  origin: http://127.0.0.1:8090
+  sec-fetch-site: same-origin
+  sec-fetch-mode: cors
+  sec-fetch-dest: empty
+  referer: http://127.0.0.1:8090/swagger-ui/index.html
+  accept-encoding: gzip, deflate, br, zstd
+  accept-language: zh-CN,zh;q=0.9
+请求参数:
+  (无)
+==============================
+2026-01-23 15:24:10.398 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [LoginForm(username=admin, password=123456)]
+2026-01-23 15:24:10.402 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.example.performanceevaluation.exception.GlobalExceptionHandler#handleBusinessException(BusinessException)
+2026-01-23 15:24:10.402 [http-nio-8090-exec-10] WARN  c.e.p.e.GlobalExceptionHandler - 业务异常: 用户名或密码错误
+2026-01-23 15:24:10.402 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-23 15:24:10.402 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseResult(code=401, status=false, message=用户名或密码错误, data=null)]
+2026-01-23 15:24:10.404 [http-nio-8090-exec-10] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.example.performanceevaluation.exception.BusinessException: 用户名或密码错误]
+2026-01-23 15:24:10.404 [http-nio-8090-exec-10] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求结束 ==========
+请求方法: POST
+请求URI: /api/auth/login
+响应状态码: 200
+耗时: 6ms
+响应头:
+  Vary: Origin
+  Vary: Origin
+  Vary: Origin
+  Content-Type: application/json
+  Transfer-Encoding: chunked
+  Date: Fri, 23 Jan 2026 07:24:10 GMT
+  Keep-Alive: timeout=60
+  Connection: keep-alive
+==============================
+2026-01-23 15:24:10.404 [http-nio-8090-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-23 15:25:06.498 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-23 15:25:06.502 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-23 15:25:15.139 [main] INFO  c.e.p.PerformanceEvaluationApplication - Starting PerformanceEvaluationApplication using Java 17.0.15 with PID 22320 (D:\work\performanceEvaluation\target\classes started by code in D:\work\performanceEvaluation)
+2026-01-23 15:25:15.139 [main] DEBUG c.e.p.PerformanceEvaluationApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2026-01-23 15:25:15.140 [main] INFO  c.e.p.PerformanceEvaluationApplication - The following 1 profile is active: "dev"
+2026-01-23 15:25:15.627 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-23 15:25:15.629 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-23 15:25:15.649 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2026-01-23 15:25:15.710 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.example.performanceevaluation.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2026-01-23 15:25:15.711 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.performanceevaluation.dao]' package. Please check your configuration.
+2026-01-23 15:25:16.018 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8090 (http)
+2026-01-23 15:25:16.025 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-23 15:25:16.025 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-01-23 15:25:16.074 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-01-23 15:25:16.075 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 910 ms
+2026-01-23 15:25:16.708 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+2026-01-23 15:25:16.751 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-01-23 15:25:16.767 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 2 ResponseBodyAdvice
+2026-01-23 15:25:16.790 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 2 ResponseBodyAdvice
+2026-01-23 15:25:16.924 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8090 (http) with context path ''
+2026-01-23 15:25:16.932 [main] INFO  c.e.p.PerformanceEvaluationApplication - Started PerformanceEvaluationApplication in 2.119 seconds (process running for 2.511)
+2026-01-23 15:26:15.133 [http-nio-8090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-23 15:26:15.133 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-23 15:26:15.133 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-01-23 15:26:15.133 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-01-23 15:26:15.133 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-01-23 15:26:15.134 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@57ca6cde
+2026-01-23 15:26:15.134 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@3eb98057
+2026-01-23 15:26:15.134 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-01-23 15:26:15.134 [http-nio-8090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-01-23 15:26:15.139 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/auth/login", parameters={}
+2026-01-23 15:26:15.147 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.performanceevaluation.controller.AuthController#login(LoginForm)
+2026-01-23 15:26:15.154 [http-nio-8090-exec-1] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求开始 ==========
+请求方法: POST
+请求URI: /api/auth/login
+请求URL: http://127.0.0.1:8090/api/auth/login
+客户端IP: 127.0.0.1
+请求协议: HTTP/1.1
+请求头:
+  host: 127.0.0.1:8090
+  connection: keep-alive
+  content-length: 49
+  sec-ch-ua-platform: "Windows"
+  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+  accept: */*
+  sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
+  content-type: application/json
+  sec-ch-ua-mobile: ?0
+  origin: http://127.0.0.1:8090
+  sec-fetch-site: same-origin
+  sec-fetch-mode: cors
+  sec-fetch-dest: empty
+  referer: http://127.0.0.1:8090/swagger-ui/index.html
+  accept-encoding: gzip, deflate, br, zstd
+  accept-language: zh-CN,zh;q=0.9
+请求参数:
+  (无)
+==============================
+2026-01-23 15:26:15.212 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [LoginForm(username=admin, password=123456)]
+2026-01-23 15:26:15.325 [http-nio-8090-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-23 15:26:15.459 [http-nio-8090-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4d27cc6a
+2026-01-23 15:26:15.461 [http-nio-8090-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-23 15:26:15.505 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.example.performanceevaluation.exception.GlobalExceptionHandler#handleBusinessException(BusinessException)
+2026-01-23 15:26:15.505 [http-nio-8090-exec-1] WARN  c.e.p.e.GlobalExceptionHandler - 业务异常: 用户名或密码错误
+2026-01-23 15:26:15.515 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-23 15:26:15.516 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseResult(code=401, status=false, message=用户名或密码错误, data=null)]
+2026-01-23 15:26:15.523 [http-nio-8090-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.example.performanceevaluation.exception.BusinessException: 用户名或密码错误]
+2026-01-23 15:26:15.524 [http-nio-8090-exec-1] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求结束 ==========
+请求方法: POST
+请求URI: /api/auth/login
+响应状态码: 200
+耗时: 371ms
+响应头:
+  Vary: Origin
+  Vary: Origin
+  Vary: Origin
+  Content-Type: application/json
+  Transfer-Encoding: chunked
+  Date: Fri, 23 Jan 2026 07:26:15 GMT
+  Keep-Alive: timeout=60
+  Connection: keep-alive
+==============================
+2026-01-23 15:26:15.524 [http-nio-8090-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-23 15:26:18.042 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/index.html", parameters={}
+2026-01-23 15:26:18.045 [http-nio-8090-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-23 15:26:18.054 [http-nio-8090-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2026-01-23 15:26:18.066 [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-initializer.js", parameters={}
+2026-01-23 15:26:18.067 [http-nio-8090-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-01-23 15:26:18.076 [http-nio-8090-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-23 15:26:18.143 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/v3/api-docs/swagger-config", parameters={}
+2026-01-23 15:26:18.145 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2026-01-23 15:26:18.147 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+2026-01-23 15:26:18.148 [http-nio-8090-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://127.0.0.1:8090/swagger-ui/oauth2-re (truncated)...]
+2026-01-23 15:26:18.149 [http-nio-8090-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-23 15:26:18.172 [http-nio-8090-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/v3/api-docs", parameters={}
+2026-01-23 15:26:18.173 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2026-01-23 15:26:18.480 [http-nio-8090-exec-7] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 302 ms
+2026-01-23 15:26:18.491 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, */*] and supported [application/json]
+2026-01-23 15:26:18.492 [http-nio-8090-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 48, 46, 49, 34, 44, 34, 105, 110, 10 (truncated)...]
+2026-01-23 15:26:18.493 [http-nio-8090-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2026-01-23 15:26:41.492 [http-nio-8090-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/auth/login", parameters={}
+2026-01-23 15:26:41.492 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.performanceevaluation.controller.AuthController#login(LoginForm)
+2026-01-23 15:26:41.493 [http-nio-8090-exec-6] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求开始 ==========
+请求方法: POST
+请求URI: /api/auth/login
+请求URL: http://127.0.0.1:8090/api/auth/login
+客户端IP: 127.0.0.1
+请求协议: HTTP/1.1
+请求头:
+  host: 127.0.0.1:8090
+  connection: keep-alive
+  content-length: 49
+  sec-ch-ua-platform: "Windows"
+  user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+  accept: */*
+  sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
+  content-type: application/json
+  sec-ch-ua-mobile: ?0
+  origin: http://127.0.0.1:8090
+  sec-fetch-site: same-origin
+  sec-fetch-mode: cors
+  sec-fetch-dest: empty
+  referer: http://127.0.0.1:8090/swagger-ui/index.html
+  accept-encoding: gzip, deflate, br, zstd
+  accept-language: zh-CN,zh;q=0.9
+请求参数:
+  (无)
+==============================
+2026-01-23 15:26:41.493 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [LoginForm(username=admin, password=123456)]
+2026-01-23 15:26:41.983 [http-nio-8090-exec-6] INFO  c.e.p.service.impl.AuthServiceImpl - 用户登录成功: admin
+2026-01-23 15:26:41.983 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-23 15:26:41.985 [http-nio-8090-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResponseResult(code=200, status=true, message=操作成功, data=LoginResult(token=eyJhbGciOiJIUzM4NCJ9.eyJ1 (truncated)...]
+2026-01-23 15:26:41.986 [http-nio-8090-exec-6] DEBUG c.e.p.interceptor.LoggingInterceptor - 
+========== 请求结束 ==========
+请求方法: POST
+请求URI: /api/auth/login
+响应状态码: 200
+耗时: 493ms
+响应头:
+  Vary: Origin
+  Vary: Origin
+  Vary: Origin
+  Content-Type: application/json
+  Transfer-Encoding: chunked
+  Date: Fri, 23 Jan 2026 07:26:41 GMT
+  Keep-Alive: timeout=60
+  Connection: keep-alive
+==============================
+2026-01-23 15:26:41.986 [http-nio-8090-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK

@@ -1,0 +1,47 @@
+2026-01-22T11:17:24.414+08:00  INFO 311744 --- [performance-evaluation] [main] c.e.p.PerformanceEvaluationApplication   : Starting PerformanceEvaluationApplication using Java 17.0.15 with PID 311744 (D:\work\performanceEvaluation\target\classes started by code in D:\work\performanceEvaluation)
+2026-01-22T11:17:24.419+08:00 DEBUG 311744 --- [performance-evaluation] [main] c.e.p.PerformanceEvaluationApplication   : Running with Spring Boot v3.2.4, Spring v6.1.5
+2026-01-22T11:17:24.420+08:00  INFO 311744 --- [performance-evaluation] [main] c.e.p.PerformanceEvaluationApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-22T11:17:24.953+08:00  WARN 311744 --- [performance-evaluation] [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.example.performanceevaluation.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2026-01-22T11:17:24.954+08:00  WARN 311744 --- [performance-evaluation] [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.performanceevaluation.dao]' package. Please check your configuration.
+2026-01-22T11:17:25.233+08:00  INFO 311744 --- [performance-evaluation] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2026-01-22T11:17:25.241+08:00  INFO 311744 --- [performance-evaluation] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-22T11:17:25.241+08:00  INFO 311744 --- [performance-evaluation] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-01-22T11:17:25.290+08:00  INFO 311744 --- [performance-evaluation] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-22T11:17:25.290+08:00  INFO 311744 --- [performance-evaluation] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 837 ms
+2026-01-22T11:17:26.019+08:00  INFO 311744 --- [performance-evaluation] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path ''
+2026-01-22T11:17:26.025+08:00  INFO 311744 --- [performance-evaluation] [main] c.e.p.PerformanceEvaluationApplication   : Started PerformanceEvaluationApplication in 1.935 seconds (process running for 2.387)
+2026-01-22T11:20:49.572+08:00  INFO 311744 --- [performance-evaluation] [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-22T11:20:49.573+08:00  INFO 311744 --- [performance-evaluation] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-22T11:20:49.574+08:00  INFO 311744 --- [performance-evaluation] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-01-22T11:25:12.374+08:00  INFO 326348 --- [performance-evaluation] [main] c.e.p.PerformanceEvaluationApplication   : Starting PerformanceEvaluationApplication using Java 17.0.15 with PID 326348 (D:\work\performanceEvaluation\target\classes started by code in D:\work\performanceEvaluation)
+2026-01-22T11:25:12.375+08:00 DEBUG 326348 --- [performance-evaluation] [main] c.e.p.PerformanceEvaluationApplication   : Running with Spring Boot v3.2.4, Spring v6.1.5
+2026-01-22T11:25:12.376+08:00  INFO 326348 --- [performance-evaluation] [main] c.e.p.PerformanceEvaluationApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-22T11:25:12.814+08:00  WARN 326348 --- [performance-evaluation] [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.example.performanceevaluation.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2026-01-22T11:25:12.814+08:00  WARN 326348 --- [performance-evaluation] [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.performanceevaluation.dao]' package. Please check your configuration.
+2026-01-22T11:25:13.061+08:00  INFO 326348 --- [performance-evaluation] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2026-01-22T11:25:13.068+08:00  INFO 326348 --- [performance-evaluation] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-22T11:25:13.068+08:00  INFO 326348 --- [performance-evaluation] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-01-22T11:25:13.111+08:00  INFO 326348 --- [performance-evaluation] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-22T11:25:13.111+08:00  INFO 326348 --- [performance-evaluation] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 708 ms
+2026-01-22T11:25:13.773+08:00  INFO 326348 --- [performance-evaluation] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path ''
+2026-01-22T11:25:13.778+08:00  INFO 326348 --- [performance-evaluation] [main] c.e.p.PerformanceEvaluationApplication   : Started PerformanceEvaluationApplication in 1.683 seconds (process running for 2.071)
+2026-01-22T11:25:17.266+08:00  INFO 326348 --- [performance-evaluation] [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-22T11:25:17.266+08:00  INFO 326348 --- [performance-evaluation] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-22T11:25:17.267+08:00  INFO 326348 --- [performance-evaluation] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-01-22T11:25:41.187+08:00  INFO 326348 --- [performance-evaluation] [http-nio-8090-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 163 ms
+2026-01-22T11:34:13.456+08:00  INFO 326288 --- [performance-evaluation] [main] c.e.p.PerformanceEvaluationApplication   : Starting PerformanceEvaluationApplication using Java 17.0.15 with PID 326288 (D:\work\performanceEvaluation\target\classes started by code in D:\work\performanceEvaluation)
+2026-01-22T11:34:13.458+08:00 DEBUG 326288 --- [performance-evaluation] [main] c.e.p.PerformanceEvaluationApplication   : Running with Spring Boot v3.2.4, Spring v6.1.5
+2026-01-22T11:34:13.458+08:00  INFO 326288 --- [performance-evaluation] [main] c.e.p.PerformanceEvaluationApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-01-22T11:34:13.955+08:00  WARN 326288 --- [performance-evaluation] [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userMapper' and 'com.example.performanceevaluation.dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2026-01-22T11:34:13.955+08:00  WARN 326288 --- [performance-evaluation] [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.performanceevaluation.dao]' package. Please check your configuration.
+2026-01-22T11:34:14.238+08:00  INFO 326288 --- [performance-evaluation] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2026-01-22T11:34:14.247+08:00  INFO 326288 --- [performance-evaluation] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-22T11:34:14.247+08:00  INFO 326288 --- [performance-evaluation] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-01-22T11:34:14.299+08:00  INFO 326288 --- [performance-evaluation] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-22T11:34:14.300+08:00  INFO 326288 --- [performance-evaluation] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 808 ms
+2026-01-22T11:34:14.969+08:00  INFO 326288 --- [performance-evaluation] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path ''
+2026-01-22T11:34:14.974+08:00  INFO 326288 --- [performance-evaluation] [main] c.e.p.PerformanceEvaluationApplication   : Started PerformanceEvaluationApplication in 1.828 seconds (process running for 2.232)
+2026-01-22T11:34:19.862+08:00  INFO 326288 --- [performance-evaluation] [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-22T11:34:19.863+08:00  INFO 326288 --- [performance-evaluation] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-22T11:34:19.864+08:00  INFO 326288 --- [performance-evaluation] [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-01-22T11:37:40.705+08:00  INFO 326288 --- [performance-evaluation] [http-nio-8090-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 219 ms

@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>知识图谱管理</title>
+    <link rel="stylesheet" href="/css/resource-management.css">
+    <!-- vis-network 用于知识图谱可视化 -->
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style>
+        /* 主容器样式 */
+        .main-container {
+            position: absolute;
+            left: 81px;
+            top: 120px;
+            width: 1041px;
+            height: 700px;
+            background-color: rgba(255, 255, 255, 1);
+            border: 1px solid rgba(121, 121, 121, 1);
+            border-radius: 8px;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        /* 标签页样式 */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(121, 121, 121, 1);
+        }
+
+        .tab {
+            padding: 10px 20px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            font-size: 16px;
+            font-weight: 600;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            top: 2px;
+        }
+
+        .tab:hover {
+            color: #333;
+        }
+
+        .tab.active {
+            color: #0066cc;
+            border-bottom-color: #0066cc;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* 构建表单样式 */
+        .build-form {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .form-label.required::after {
+            content: ' *';
+            color: #ff0000;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid rgba(121, 121, 121, 1);
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: 'Arial Normal', 'Arial', sans-serif;
+            transition: border-color 0.3s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #0066cc;
+            box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.1);
+        }
+
+        .form-textarea {
+            width: 100%;
+            min-height: 150px;
+            padding: 10px;
+            border: 1px solid rgba(121, 121, 121, 1);
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: 'Arial Normal', 'Arial', sans-serif;
+            resize: vertical;
+            transition: border-color 0.3s;
+        }
+
+        .form-textarea:focus {
+            outline: none;
+            border-color: #0066cc;
+            box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.1);
+        }
+
+        .form-checkbox-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .form-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .form-checkbox input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .form-checkbox label {
+            cursor: pointer;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            min-width: 120px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #0052a3 0%, #003d7a 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 102, 204, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 1);
+            color: #333;
+            border: 1px solid rgba(121, 121, 121, 1);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(240, 240, 240, 1);
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        /* 图谱列表样式 */
+        .graph-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .graph-card {
+            background-color: rgba(255, 255, 255, 1);
+            border: 1px solid rgba(121, 121, 121, 1);
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .graph-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .graph-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .graph-card-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .graph-card-status {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .status-success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .status-building {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+
+        .status-error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        .graph-card-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .graph-card-stats {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(240, 240, 240, 1);
+        }
+
+        .graph-stat {
+            flex: 1;
+            text-align: center;
+        }
+
+        .graph-stat-value {
+            font-size: 20px;
+            font-weight: 600;
+            color: #0066cc;
+        }
+
+        .graph-stat-label {
+            font-size: 12px;
+            color: #999;
+            margin-top: 5px;
+        }
+
+        .graph-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .graph-card-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-small {
+            padding: 6px 12px;
+            font-size: 12px;
+            border-radius: 4px;
+            border: 1px solid rgba(121, 121, 121, 1);
+            background-color: rgba(255, 255, 255, 1);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-small:hover {
+            background-color: rgba(240, 240, 240, 1);
+        }
+
+        .btn-small.btn-view {
+            background-color: #0066cc;
+            color: white;
+            border-color: #0066cc;
+        }
+
+        .btn-small.btn-view:hover {
+            background-color: #0052a3;
+        }
+
+        /* 详情模态框样式 */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            max-width: 900px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(240, 240, 240, 1);
+        }
+
+        .modal-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 28px;
+            color: #999;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .modal-close:hover {
+            background-color: rgba(240, 240, 240, 1);
+            color: #333;
+        }
+
+        .detail-section {
+            margin-bottom: 25px;
+        }
+
+        .detail-section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(240, 240, 240, 1);
+        }
+
+        .detail-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .detail-info-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .detail-info-label {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 5px;
+        }
+
+        .detail-info-value {
+            font-size: 14px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* 图谱可视化容器 */
+        .graph-visualization {
+            width: 100%;
+            height: 500px;
+            border: 1px solid rgba(121, 121, 121, 1);
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #graph-network {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 图谱控制按钮 */
+        .graph-controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 10px;
+            z-index: 100;
+        }
+
+        .graph-control-btn {
+            padding: 6px 12px;
+            background-color: white;
+            border: 1px solid rgba(121, 121, 121, 1);
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .graph-control-btn:hover {
+            background-color: rgba(240, 240, 240, 1);
+        }
+
+        /* 节点类型颜色映射 */
+        .node-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #333;
+        }
+
+        /* 加载状态 */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .spinner {
+            border: 4px solid rgba(0, 102, 204, 0.1);
+            border-top: 4px solid #0066cc;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* 空状态 */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+        }
+
+        .empty-state-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .empty-state-text {
+            font-size: 16px;
+        }
+
+        /* 提示信息 */
+        .alert {
+            padding: 12px 16px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .alert-info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <div id="base">
+        <!-- 标题 -->
+        <div class="page-title">
+            <p><span>抢修任务筹划系统</span></p>
+        </div>
+
+        <!-- 返回按钮 -->
+        <a href="/html/index.html" class="back-button" style="position: absolute; top: 20px; left: 20px; padding: 8px 16px; background-color: rgba(255, 255, 255, 1); border: 1px solid rgba(121, 121, 121, 1); border-radius: 4px; font-size: 14px; cursor: pointer; text-decoration: none; color: #333333;">
+            返回主页
+        </a>
+
+        <!-- 主容器 -->
+        <div class="main-container">
+            <!-- 标签页 -->
+            <div class="tabs">
+                <button class="tab active" onclick="switchTab('build')">构建知识图谱</button>
+                <button class="tab" onclick="switchTab('list')">图谱列表</button>
+            </div>
+
+            <!-- 构建表单标签页 -->
+            <div id="tab-build" class="tab-content active">
+                <div class="build-form">
+                    <div id="build-alert"></div>
+                    
+                    <div class="form-group">
+                        <label class="form-label required" for="graph-name">图谱名称</label>
+                        <input type="text" id="graph-name" class="form-input" placeholder="请输入图谱名称" maxlength="200">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="graph-description">图谱描述</label>
+                        <input type="text" id="graph-description" class="form-input" placeholder="请输入图谱描述（可选）" maxlength="1000">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label required" for="input-text">输入文本</label>
+                        <textarea id="input-text" class="form-textarea" placeholder="请输入要构建知识图谱的文本内容，至少10个字符..."></textarea>
+                        <div style="text-align: right; margin-top: 5px; font-size: 12px; color: #999;">
+                            <span id="text-count">0</span> / 无限制
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">构建选项</label>
+                        <div class="form-checkbox-group">
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="auto-extract-entities" checked>
+                                <label for="auto-extract-entities">自动提取实体</label>
+                            </div>
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="auto-extract-relations" checked>
+                                <label for="auto-extract-relations">自动提取关系</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="btn btn-primary" onclick="buildGraph()" id="build-btn">
+                            <span id="build-btn-text">构建知识图谱</span>
+                        </button>
+                        <button class="btn btn-secondary" onclick="buildGraphAsync()" id="build-async-btn">
+                            <span id="build-async-btn-text">异步构建</span>
+                        </button>
+                        <button class="btn btn-secondary" onclick="resetForm()">重置</button>
+                    </div>
+
+                    <div class="loading" id="build-loading">
+                        <div class="spinner"></div>
+                        <div>正在构建知识图谱，请稍候...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 图谱列表标签页 -->
+            <div id="tab-list" class="tab-content">
+                <div style="margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="margin: 0; font-size: 18px; color: #333;">已构建的知识图谱</h3>
+                    <button class="btn btn-secondary" onclick="loadGraphList()" style="padding: 8px 16px; min-width: auto;">
+                        刷新
+                    </button>
+                </div>
+
+                <div id="graph-list-container">
+                    <div class="loading" id="list-loading">
+                        <div class="spinner"></div>
+                        <div>加载中...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 详情模态框 -->
+    <div class="modal" id="detail-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modal-title">知识图谱详情</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div id="modal-body">
+                <!-- 详情内容将通过JavaScript动态加载 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/auth.js"></script>
+    <script>
+        // 页面初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!AuthUtil.requireAuth()) return;
+            
+            // 监听文本输入字数
+            const inputText = document.getElementById('input-text');
+            const textCount = document.getElementById('text-count');
+            inputText.addEventListener('input', function() {
+                textCount.textContent = this.value.length;
+            });
+            
+            // 加载图谱列表
+            loadGraphList();
+        });
+
+        // 切换标签页
+        function switchTab(tabName) {
+            // 更新标签样式
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            event.target.classList.add('active');
+            document.getElementById('tab-' + tabName).classList.add('active');
+            
+            // 如果切换到列表页，刷新列表
+            if (tabName === 'list') {
+                loadGraphList();
+            }
+        }
+
+        // 显示提示信息
+        function showAlert(message, type = 'info') {
+            const alertDiv = document.getElementById('build-alert');
+            alertDiv.className = 'alert alert-' + type;
+            alertDiv.textContent = message;
+            alertDiv.style.display = 'block';
+            
+            // 3秒后自动隐藏
+            setTimeout(() => {
+                alertDiv.style.display = 'none';
+            }, 3000);
+        }
+
+        // 构建知识图谱
+        async function buildGraph() {
+            const name = document.getElementById('graph-name').value.trim();
+            const description = document.getElementById('graph-description').value.trim();
+            const inputText = document.getElementById('input-text').value.trim();
+            const autoExtractEntities = document.getElementById('auto-extract-entities').checked;
+            const autoExtractRelations = document.getElementById('auto-extract-relations').checked;
+
+            // 验证输入
+            if (!name) {
+                showAlert('请输入图谱名称', 'error');
+                return;
+            }
+            if (!inputText || inputText.length < 10) {
+                showAlert('请输入至少10个字符的文本内容', 'error');
+                return;
+            }
+
+            // 禁用按钮
+            const buildBtn = document.getElementById('build-btn');
+            const buildBtnText = document.getElementById('build-btn-text');
+            buildBtn.disabled = true;
+            buildBtnText.textContent = '构建中...';
+            
+            const loading = document.getElementById('build-loading');
+            loading.classList.add('active');
+
+            try {
+                const result = await ApiUtil.post('/api/knowledge-graph/build', {
+                    name: name,
+                    description: description,
+                    inputText: inputText,
+                    autoExtractEntities: autoExtractEntities,
+                    autoExtractRelations: autoExtractRelations
+                });
+
+                if (result && result.data) {
+                    showAlert('知识图谱构建成功！', 'success');
+                    // 切换到列表页并刷新
+                    setTimeout(() => {
+                        switchTab('list');
+                        loadGraphList();
+                    }, 1500);
+                } else {
+                    showAlert(result?.message || '构建失败', 'error');
+                }
+            } catch (error) {
+                console.error('构建知识图谱错误:', error);
+                showAlert(error.message || '构建失败，请稍后重试', 'error');
+            } finally {
+                buildBtn.disabled = false;
+                buildBtnText.textContent = '构建知识图谱';
+                loading.classList.remove('active');
+            }
+        }
+
+        // 异步构建知识图谱
+        async function buildGraphAsync() {
+            const name = document.getElementById('graph-name').value.trim();
+            const description = document.getElementById('graph-description').value.trim();
+            const inputText = document.getElementById('input-text').value.trim();
+            const autoExtractEntities = document.getElementById('auto-extract-entities').checked;
+            const autoExtractRelations = document.getElementById('auto-extract-relations').checked;
+
+            // 验证输入
+            if (!name) {
+                showAlert('请输入图谱名称', 'error');
+                return;
+            }
+            if (!inputText || inputText.length < 10) {
+                showAlert('请输入至少10个字符的文本内容', 'error');
+                return;
+            }
+
+            // 禁用按钮
+            const buildAsyncBtn = document.getElementById('build-async-btn');
+            const buildAsyncBtnText = document.getElementById('build-async-btn-text');
+            buildAsyncBtn.disabled = true;
+            buildAsyncBtnText.textContent = '构建中...';
+            
+            const loading = document.getElementById('build-loading');
+            loading.classList.add('active');
+
+            try {
+                const result = await ApiUtil.post('/api/knowledge-graph/build-async', {
+                    name: name,
+                    description: description,
+                    inputText: inputText,
+                    autoExtractEntities: autoExtractEntities,
+                    autoExtractRelations: autoExtractRelations
+                });
+
+                if (result && result.data) {
+                    showAlert('知识图谱异步构建成功！', 'success');
+                    // 切换到列表页并刷新
+                    setTimeout(() => {
+                        switchTab('list');
+                        loadGraphList();
+                    }, 1500);
+                } else {
+                    showAlert(result?.message || '构建失败', 'error');
+                }
+            } catch (error) {
+                console.error('异步构建知识图谱错误:', error);
+                showAlert(error.message || '构建失败，请稍后重试', 'error');
+            } finally {
+                buildAsyncBtn.disabled = false;
+                buildAsyncBtnText.textContent = '异步构建';
+                loading.classList.remove('active');
+            }
+        }
+
+        // 重置表单
+        function resetForm() {
+            document.getElementById('graph-name').value = '';
+            document.getElementById('graph-description').value = '';
+            document.getElementById('input-text').value = '';
+            document.getElementById('text-count').textContent = '0';
+            document.getElementById('auto-extract-entities').checked = true;
+            document.getElementById('auto-extract-relations').checked = true;
+            document.getElementById('build-alert').style.display = 'none';
+        }
+
+        // 加载图谱列表
+        async function loadGraphList() {
+            const container = document.getElementById('graph-list-container');
+            const loading = document.getElementById('list-loading');
+            
+            loading.classList.add('active');
+            container.innerHTML = '';
+
+            try {
+                const result = await ApiUtil.get('/api/knowledge-graph');
+                
+                if (result && result.data && result.data.length > 0) {
+                    const graphs = result.data;
+                    container.innerHTML = '<div class="graph-list"></div>';
+                    const graphList = container.querySelector('.graph-list');
+                    
+                    graphs.forEach(graph => {
+                        const createdAt = graph.createdAt ? new Date(graph.createdAt).toLocaleString('zh-CN') : '-';
+                        const statusClass = graph.status?.toLowerCase() || 'success';
+                        
+                        const card = document.createElement('div');
+                        card.className = 'graph-card';
+                        card.innerHTML = `
+                            <div class="graph-card-header">
+                                <div>
+                                    <div class="graph-card-title">${graph.name || '未命名图谱'}</div>
+                                    <span class="graph-card-status status-${statusClass}">${graph.status || 'SUCCESS'}</span>
+                                </div>
+                            </div>
+                            <div class="graph-card-description">${graph.description || '暂无描述'}</div>
+                            <div class="graph-card-stats">
+                                <div class="graph-stat">
+                                    <div class="graph-stat-value">${graph.nodeCount || 0}</div>
+                                    <div class="graph-stat-label">节点</div>
+                                </div>
+                                <div class="graph-stat">
+                                    <div class="graph-stat-value">${graph.edgeCount || 0}</div>
+                                    <div class="graph-stat-label">关系</div>
+                                </div>
+                            </div>
+                            <div class="graph-card-footer">
+                                <span>创建时间: ${createdAt}</span>
+                                <div class="graph-card-actions">
+                                    <button class="btn-small btn-view" onclick="viewGraphDetail(${graph.graphId})">查看详情</button>
+                                </div>
+                            </div>
+                        `;
+                        graphList.appendChild(card);
+                    });
+                } else {
+                    container.innerHTML = `
+                        <div class="empty-state">
+                            <div class="empty-state-icon">📊</div>
+                            <div class="empty-state-text">
+                                <p>暂无知识图谱数据</p>
+                                <p style="font-size: 14px; margin-top: 10px; color: #999;">
+                                    请切换到"构建知识图谱"标签页创建新的知识图谱
+                                </p>
+                            </div>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('加载图谱列表错误:', error);
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">⚠️</div>
+                        <div class="empty-state-text">加载失败，请稍后重试</div>
+                    </div>
+                `;
+            } finally {
+                loading.classList.remove('active');
+            }
+        }
+
+        // 查看图谱详情
+        async function viewGraphDetail(graphId) {
+            const modal = document.getElementById('detail-modal');
+            const modalBody = document.getElementById('modal-body');
+            const modalTitle = document.getElementById('modal-title');
+
+            modal.classList.add('active');
+            modalBody.innerHTML = '<div class="loading active"><div class="spinner"></div><div>加载中...</div></div>';
+
+            try {
+                const result = await ApiUtil.get(`/api/knowledge-graph/${graphId}`);
+                
+                if (result && result.data) {
+                    const graph = result.data;
+                    modalTitle.textContent = graph.name || '知识图谱详情';
+                    
+                    const createdAt = graph.createdAt ? new Date(graph.createdAt).toLocaleString('zh-CN') : '-';
+                    const buildTime = graph.buildTime ? (graph.buildTime / 1000).toFixed(2) + '秒' : '-';
+                    
+                    // 生成可视化HTML
+                    let visualizationHtml = '';
+                    if (graph.nodes && graph.nodes.length > 0) {
+                        visualizationHtml = `
+                            <div class="detail-section">
+                                <div class="detail-section-title">知识图谱可视化</div>
+                                <div class="graph-visualization">
+                                    <div id="graph-network"></div>
+                                    <div class="graph-controls">
+                                        <button class="graph-control-btn" onclick="resetGraphLayout()">重置布局</button>
+                                        <button class="graph-control-btn" onclick="fitGraphView()">适应窗口</button>
+                                    </div>
+                                </div>
+                                <div class="node-legend" id="node-legend"></div>
+                            </div>
+                        `;
+                    }
+
+                    modalBody.innerHTML = `
+                        <div class="detail-section">
+                            <div class="detail-section-title">基本信息</div>
+                            <div class="detail-info">
+                                <div class="detail-info-item">
+                                    <div class="detail-info-label">图谱名称</div>
+                                    <div class="detail-info-value">${graph.name || '-'}</div>
+                                </div>
+                                <div class="detail-info-item">
+                                    <div class="detail-info-label">图谱描述</div>
+                                    <div class="detail-info-value">${graph.description || '-'}</div>
+                                </div>
+                                <div class="detail-info-item">
+                                    <div class="detail-info-label">节点数量</div>
+                                    <div class="detail-info-value">${graph.nodeCount || 0}</div>
+                                </div>
+                                <div class="detail-info-item">
+                                    <div class="detail-info-label">边数量</div>
+                                    <div class="detail-info-value">${graph.edgeCount || 0}</div>
+                                </div>
+                                <div class="detail-info-item">
+                                    <div class="detail-info-label">构建耗时</div>
+                                    <div class="detail-info-value">${buildTime}</div>
+                                </div>
+                                <div class="detail-info-item">
+                                    <div class="detail-info-label">创建时间</div>
+                                    <div class="detail-info-value">${createdAt}</div>
+                                </div>
+                                <div class="detail-info-item">
+                                    <div class="detail-info-label">构建状态</div>
+                                    <div class="detail-info-value">
+                                        <span class="graph-card-status status-${graph.status?.toLowerCase() || 'success'}">
+                                            ${graph.status || 'SUCCESS'}
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="detail-info-item">
+                                    <div class="detail-info-label">构建消息</div>
+                                    <div class="detail-info-value">${graph.message || '-'}</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        ${visualizationHtml}
+                        
+                        ${graph.nodes && graph.nodes.length > 0 ? `
+                        <div class="detail-section">
+                            <div class="detail-section-title">节点列表 (${graph.nodes.length})</div>
+                            <div style="max-height: 200px; overflow-y: auto; border: 1px solid rgba(121, 121, 121, 1); border-radius: 4px; padding: 10px;">
+                                ${graph.nodes.map((node, index) => `
+                                    <div style="padding: 8px; border-bottom: 1px solid rgba(240, 240, 240, 1); ${index === graph.nodes.length - 1 ? 'border-bottom: none;' : ''}">
+                                        <strong>${node.label || node.id}</strong>
+                                        <span style="color: #999; font-size: 12px; margin-left: 10px;">[${node.type || 'THING'}]</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                        ` : ''}
+                        
+                        ${graph.edges && graph.edges.length > 0 ? `
+                        <div class="detail-section">
+                            <div class="detail-section-title">关系列表 (${graph.edges.length})</div>
+                            <div style="max-height: 200px; overflow-y: auto; border: 1px solid rgba(121, 121, 121, 1); border-radius: 4px; padding: 10px;">
+                                ${graph.edges.map((edge, index) => `
+                                    <div style="padding: 8px; border-bottom: 1px solid rgba(240, 240, 240, 1); ${index === graph.edges.length - 1 ? 'border-bottom: none;' : ''}">
+                                        <strong>${edge.source}</strong> 
+                                        <span style="color: #0066cc; margin: 0 8px;">${edge.relation || 'RELATED_TO'}</span>
+                                        <strong>${edge.target}</strong>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                        ` : ''}
+                    `;
+
+                    // 渲染知识图谱可视化
+                    if (graph.nodes && graph.nodes.length > 0) {
+                        setTimeout(() => {
+                            renderKnowledgeGraph(graph.nodes, graph.edges || []);
+                        }, 100);
+                    }
+                } else {
+                    modalBody.innerHTML = '<div class="alert alert-error">加载失败</div>';
+                }
+            } catch (error) {
+                console.error('加载图谱详情错误:', error);
+                modalBody.innerHTML = `<div class="alert alert-error">${error.message || '加载失败'}</div>`;
+            }
+        }
+
+        // 关闭模态框
+        function closeModal() {
+            document.getElementById('detail-modal').classList.remove('active');
+        }
+
+        // 点击模态框外部关闭
+        document.getElementById('detail-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // 知识图谱可视化相关变量
+        let network = null;
+        let graphData = null;
+
+        // 节点类型颜色映射
+        const nodeTypeColors = {
+            'PERSON': '#FF6B6B',      // 红色 - 人物
+            'LOCATION': '#4ECDC4',     // 青色 - 地点
+            'ORGANIZATION': '#45B7D1', // 蓝色 - 组织
+            'CONCEPT': '#96CEB4',      // 绿色 - 概念
+            'EVENT': '#FFEAA7',        // 黄色 - 事件
+            'THING': '#DDA15E',        // 橙色 - 事物
+            'DEFAULT': '#95A5A6'       // 灰色 - 默认
+        };
+
+        // 渲染知识图谱
+        function renderKnowledgeGraph(nodes, edges) {
+            const container = document.getElementById('graph-network');
+            if (!container) return;
+
+            // 清理之前的网络
+            if (network) {
+                network.destroy();
+            }
+
+            // 转换节点数据
+            const visNodes = nodes.map((node, index) => {
+                const nodeType = (node.type || 'THING').toUpperCase();
+                const color = nodeTypeColors[nodeType] || nodeTypeColors['DEFAULT'];
+                
+                return {
+                    id: node.id,
+                    label: node.label || node.id,
+                    title: `类型: ${nodeType}\nID: ${node.id}`,
+                    color: {
+                        background: color,
+                        border: '#333',
+                        highlight: {
+                            background: color,
+                            border: '#000'
+                        }
+                    },
+                    font: {
+                        size: 14,
+                        color: '#333',
+                        face: 'Arial'
+                    },
+                    shape: 'dot',
+                    size: 20,
+                    borderWidth: 2
+                };
+            });
+
+            // 转换边数据
+            const visEdges = edges.map((edge, index) => {
+                return {
+                    id: edge.id || `edge_${index}`,
+                    from: edge.source,
+                    to: edge.target,
+                    label: edge.relation || 'RELATED_TO',
+                    arrows: {
+                        to: {
+                            enabled: true,
+                            scaleFactor: 0.8
+                        }
+                    },
+                    color: {
+                        color: '#848484',
+                        highlight: '#0066cc'
+                    },
+                    font: {
+                        size: 12,
+                        color: '#333',
+                        align: 'middle',
+                        face: 'Arial'
+                    },
+                    width: 2,
+                    smooth: {
+                        type: 'continuous',
+                        roundness: 0.5
+                    }
+                };
+            });
+
+            // 创建数据对象
+            graphData = {
+                nodes: new vis.DataSet(visNodes),
+                edges: new vis.DataSet(visEdges)
+            };
+
+            // 配置选项
+            const options = {
+                nodes: {
+                    shape: 'dot',
+                    size: 20,
+                    font: {
+                        size: 14,
+                        color: '#333'
+                    },
+                    borderWidth: 2,
+                    shadow: true
+                },
+                edges: {
+                    width: 2,
+                    color: {
+                        color: '#848484',
+                        highlight: '#0066cc'
+                    },
+                    font: {
+                        size: 12,
+                        color: '#333',
+                        align: 'middle'
+                    },
+                    arrows: {
+                        to: {
+                            enabled: true,
+                            scaleFactor: 0.8
+                        }
+                    },
+                    smooth: {
+                        type: 'continuous',
+                        roundness: 0.5
+                    },
+                    labelHighlightBold: true
+                },
+                physics: {
+                    enabled: true,
+                    stabilization: {
+                        enabled: true,
+                        iterations: 200,
+                        fit: true
+                    },
+                    barnesHut: {
+                        gravitationalConstant: -2000,
+                        centralGravity: 0.1,
+                        springLength: 200,
+                        springConstant: 0.04,
+                        damping: 0.09
+                    }
+                },
+                interaction: {
+                    hover: true,
+                    tooltipDelay: 200,
+                    zoomView: true,
+                    dragView: true
+                },
+                layout: {
+                    improvedLayout: true,
+                    hierarchical: {
+                        enabled: false
+                    }
+                }
+            };
+
+            // 创建网络
+            network = new vis.Network(container, graphData, options);
+
+            // 添加事件监听
+            network.on('click', function(params) {
+                if (params.nodes.length > 0) {
+                    const nodeId = params.nodes[0];
+                    const node = nodes.find(n => n.id === nodeId);
+                    if (node) {
+                        console.log('点击节点:', node);
+                    }
+                }
+            });
+
+            // 生成图例
+            generateNodeLegend();
+        }
+
+        // 生成节点类型图例
+        function generateNodeLegend() {
+            const legendContainer = document.getElementById('node-legend');
+            if (!legendContainer) return;
+
+            const uniqueTypes = new Set();
+            if (graphData && graphData.nodes) {
+                graphData.nodes.forEach(node => {
+                    const type = node.title ? node.title.split('\n')[0].replace('类型: ', '') : 'THING';
+                    uniqueTypes.add(type);
+                });
+            }
+
+            let legendHtml = '<strong style="margin-right: 10px;">节点类型:</strong>';
+            Array.from(uniqueTypes).forEach(type => {
+                const color = nodeTypeColors[type] || nodeTypeColors['DEFAULT'];
+                legendHtml += `
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: ${color};"></div>
+                        <span>${type}</span>
+                    </div>
+                `;
+            });
+
+            legendContainer.innerHTML = legendHtml;
+        }
+
+        // 重置图谱布局
+        function resetGraphLayout() {
+            if (network) {
+                network.setOptions({
+                    physics: {
+                        enabled: true,
+                        stabilization: {
+                            enabled: true,
+                            iterations: 200,
+                            fit: true
+                        }
+                    }
+                });
+            }
+        }
+
+        // 适应窗口
+        function fitGraphView() {
+            if (network) {
+                network.fit({
+                    animation: {
+                        duration: 500,
+                        easingFunction: 'easeInOutQuad'
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>
+

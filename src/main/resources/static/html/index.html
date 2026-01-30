@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录系统</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Arial Normal', 'Arial', sans-serif;
+            font-size: 13px;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            background-color: #d8d8d8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        #base {
+            position: relative;
+            width: 1200px;
+            height: 880px;
+            background-color: rgba(204, 204, 204, 1);
+            border: 1px solid rgba(121, 121, 121, 1);
+            box-sizing: border-box;
+        }
+        
+        /* 标题样式 */
+        #u10 {
+            position: absolute;
+            left: 0;
+            top: 80px;
+            width: 1200px;
+            height: 63px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;
+            font-weight: 700;
+            font-size: 48px;
+            text-align: center;
+            color: #333333;
+        }
+        
+        /* 菜单按钮容器 - 使用网格布局使其更规整 */
+        .menu-container {
+            position: absolute;
+            left: 50%;
+            top: 55%;
+            transform: translate(-50%, -50%);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            width: 700px;
+            padding: 20px;
+        }
+        
+        /* 菜单按钮样式 */
+        .menu-button {
+            width: 100%;
+            height: 180px;
+            background-color: rgba(255, 255, 255, 1);
+            border: 2px solid rgba(121, 121, 121, 1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;
+            font-weight: 700;
+            font-size: 22px;
+            color: #333333;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .menu-button:hover {
+            background-color: rgba(240, 240, 240, 1);
+            transform: translateY(-4px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .menu-button:active {
+            background-color: rgba(220, 220, 220, 1);
+            transform: translateY(-2px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .menu-button div {
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+        }
+        
+        .menu-button p {
+            margin: 0;
+            line-height: 1.5;
+            word-break: break-word;
+        }
+        
+        .menu-button span {
+            display: block;
+        }
+        
+        /* 用户信息 */
+        .user-info {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 14px;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 8px 15px;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .user-info span {
+            color: #333;
+        }
+        
+        .logout-btn {
+            padding: 6px 16px;
+            background-color: rgba(255, 255, 255, 1);
+            border: 1px solid rgba(121, 121, 121, 1);
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.3s;
+        }
+        
+        .logout-btn:hover {
+            background-color: rgba(240, 240, 240, 1);
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+    <div id="base">
+        <!-- 标题 -->
+        <div id="u10">
+            <div id="u10_text">
+                <p><span>登录系统</span></p>
+            </div>
+        </div>
+
+        <!-- 用户信息 -->
+        <div class="user-info" id="userInfo">
+            <span>欢迎，<span id="username">-</span></span>
+            <button class="logout-btn" onclick="handleLogout()">退出</button>
+        </div>
+
+        <!-- 菜单容器 -->
+        <div class="menu-container">
+            <!-- 基础维修资源管理 -->
+            <a href="/html/BasicMaintenanceResourceManagement/index.html" class="menu-button" id="u9">
+                <div id="u9_text">
+                    <p><span>基础维修资源管理</span></p>
+                </div>
+            </a>
+
+            <!-- 飞机维修知识管理 -->
+            <a href="/html/AircraftMaintenanceManual/index.html" class="menu-button" id="u11">
+                <div id="u11_text">
+                    <p><span>飞机维修知识管理</span></p>
+                </div>
+            </a>
+
+            <!-- 抢修方案管理 -->
+            <a href="/html/repair-plan.html" class="menu-button" id="u12">
+                <div id="u12_text">
+                    <p><span>抢修方案管理</span></p>
+                </div>
+            </a>
+
+            <!-- 系统管理 -->
+            <a href="/html/systemManagement/index.html" class="menu-button system-menu">
+                <div>
+                    <p><span>系统管理</span></p>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <script src="/js/auth.js"></script>
+    <script>
+        // 页面初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 检查登录状态
+            if (!AuthUtil.requireAuth()) {
+                return;
+            }
+            
+            // 显示用户信息
+            const userInfo = AuthUtil.getUserInfo();
+            if (userInfo) {
+                document.getElementById('username').textContent = userInfo.username || '用户';
+            }
+        });
+        
+        // 登出处理
+        async function handleLogout() {
+            if (confirm('确定要退出登录吗？')) {
+                await ApiUtil.logout();
+                AuthUtil.redirectToLogin();
+            }
+        }
+    </script>
+</body>
+</html>
+

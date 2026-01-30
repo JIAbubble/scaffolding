@@ -1,0 +1,77 @@
+# 激活环境配置（默认dev，可通过启动参数修改：--spring.profiles.active=prod）
+spring:
+  profiles:
+    active: dev  # 默认使用开发环境
+  application:
+    name: performance-evaluation
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 200MB
+  # Redis配置
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: # 如果有密码，填写密码
+      database: 0
+      timeout: 3000ms
+      lettuce:
+        pool:
+          max-active: 8 
+          max-idle: 8
+          min-idle: 0
+          max-wait: -1ms
+
+  # RabbitMQ 配置（请根据实际环境修改）
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+
+server:
+  port: 8090
+  servlet:
+    context-path: /
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs # OpenAPI规范文档的访问路径
+  swagger-ui:
+    enabled: true # 启用Swagger UI
+    path: /swagger-ui.html # Swagger UI的访问路径（会重定向到/swagger-ui/index.html）
+    tags-sorter: alpha # 标签排序
+    operations-sorter: alpha # 操作排序
+  show-actuator: false # 不显示actuator端点
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml
+  type-aliases-package: com.example.performanceevaluation.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    banner: false
+    db-config:
+      id-type: auto
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+logging:
+  level:
+    root: info
+    com.example.performanceevaluation: debug
+  file:
+    name: logs/performance-evaluation.log
+
+# 认证配置
+auth:
+  enabled: false  # 是否启用认证功能，true=启用，false=关闭（默认关闭）
+
+# 定时任务配置
+schedule:
+  enabled: false  # 是否启用定时任务，true=启用，false=关闭（默认关闭）
